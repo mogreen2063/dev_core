@@ -1,0 +1,5 @@
+*.gitignore~
+*.cof
+*.o
+*.h~
+*.asm
