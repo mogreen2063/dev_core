@@ -1,95 +1,96 @@
 MPLINK 5.00, LINKER
-Linker Map File - Created Sat Mar 04 14:51:24 2017
+Linker Map File - Created Mon Mar 06 15:08:52 2017
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
                 ---------  ---------  ---------  ---------  ---------
                _entry_scn       code   0x000000    program   0x000006
                    .cinit    romdata   0x000006    program   0x000002
-      InterruptVectorHigh       code   0x000008    program   0x000e68
-          .romdata_main.o    romdata   0x000e70    program   0x00022f
-        .romdata_u2open.o    romdata   0x00109f    program   0x000000
-        .idata_u1read.o_i    romdata   0x00109f    program   0x000000
-        .romdata_u1read.o    romdata   0x00109f    program   0x000000
-        .idata_u2read.o_i    romdata   0x00109f    program   0x000000
-        .romdata_u2read.o    romdata   0x00109f    program   0x000000
-        .idata_u1defs.o_i    romdata   0x00109f    program   0x000000
-        .romdata_u1defs.o    romdata   0x00109f    program   0x000000
-        .idata_u2defs.o_i    romdata   0x00109f    program   0x000000
-        .romdata_u2defs.o    romdata   0x00109f    program   0x000000
-       .idata_u1write.o_i    romdata   0x00109f    program   0x000000
-       .romdata_u1write.o    romdata   0x00109f    program   0x000000
-       .idata_u2write.o_i    romdata   0x00109f    program   0x000000
-       .romdata_u2write.o    romdata   0x00109f    program   0x000000
-        .idata___init.o_i    romdata   0x00109f    program   0x000000
-        .romdata___init.o    romdata   0x00109f    program   0x000000
-        .idata_u1baud.o_i    romdata   0x00109f    program   0x000000
-        .romdata_u1baud.o    romdata   0x00109f    program   0x000000
-        .idata_u2baud.o_i    romdata   0x00109f    program   0x000000
-        .romdata_u2baud.o    romdata   0x00109f    program   0x000000
-         .idata_c018i.o_i    romdata   0x00109f    program   0x000000
-         .romdata_c018i.o    romdata   0x00109f    program   0x000000
-          .idata_main.o_i    romdata   0x00109f    program   0x000000
-             .stringtable    romdata   0x00109f    program   0x000000
-         .idata_setup.o_i    romdata   0x00109f    program   0x000000
-         .romdata_setup.o    romdata   0x00109f    program   0x000000
-        .idata_u2open.o_i    romdata   0x00109f    program   0x000000
-        .romdata_u1open.o    romdata   0x00109f    program   0x000000
-        .idata_u1open.o_i    romdata   0x00109f    program   0x000000
-            .code_c018i.o       code   0x0010a0    program   0x000000
-             .code_main.o       code   0x0010a0    program   0x000000
-           .code_u2defs.o       code   0x0010a0    program   0x000000
-           .code_u1defs.o       code   0x0010a0    program   0x000000
-            .code_setup.o       code   0x0010a0    program   0x0000b2
-               _cinit_scn       code   0x001152    program   0x00009e
-           .code_u2open.o       code   0x0011f0    program   0x000078
-           .code_u1open.o       code   0x001268    program   0x000072
-                   STRING       code   0x0012da    program   0x00004a
-           .code_u2read.o       code   0x001324    program   0x00003e
-           .code_u1read.o       code   0x001362    program   0x00003e
-          .code_u2write.o       code   0x0013a0    program   0x00002e
-          .code_u1write.o       code   0x0013ce    program   0x00002e
-           .code_u2baud.o       code   0x0013fc    program   0x000022
-           .code_u1baud.o       code   0x00141e    program   0x000022
-                    .code       code   0x001440    program   0x000020
-             _startup_scn       code   0x001460    program   0x00001c
-           .code___init.o       code   0x00147c    program   0x000002
+      InterruptVectorHigh       code   0x000008    program   0x00110e
+          .romdata_main.o    romdata   0x001116    program   0x000245
+        .romdata_u2open.o    romdata   0x00135b    program   0x000000
+        .idata_u1read.o_i    romdata   0x00135b    program   0x000000
+        .romdata_u1read.o    romdata   0x00135b    program   0x000000
+        .idata_u2read.o_i    romdata   0x00135b    program   0x000000
+        .romdata_u2read.o    romdata   0x00135b    program   0x000000
+        .idata_u1defs.o_i    romdata   0x00135b    program   0x000000
+        .romdata_u1defs.o    romdata   0x00135b    program   0x000000
+        .idata_u2defs.o_i    romdata   0x00135b    program   0x000000
+        .romdata_u2defs.o    romdata   0x00135b    program   0x000000
+       .idata_u1write.o_i    romdata   0x00135b    program   0x000000
+       .romdata_u1write.o    romdata   0x00135b    program   0x000000
+       .idata_u2write.o_i    romdata   0x00135b    program   0x000000
+       .romdata_u2write.o    romdata   0x00135b    program   0x000000
+        .idata___init.o_i    romdata   0x00135b    program   0x000000
+        .romdata___init.o    romdata   0x00135b    program   0x000000
+        .idata_u1baud.o_i    romdata   0x00135b    program   0x000000
+        .romdata_u1baud.o    romdata   0x00135b    program   0x000000
+        .idata_u2baud.o_i    romdata   0x00135b    program   0x000000
+        .romdata_u2baud.o    romdata   0x00135b    program   0x000000
+         .idata_c018i.o_i    romdata   0x00135b    program   0x000000
+         .romdata_c018i.o    romdata   0x00135b    program   0x000000
+          .idata_main.o_i    romdata   0x00135b    program   0x000000
+         .idata_setup.o_i    romdata   0x00135b    program   0x000000
+         .romdata_setup.o    romdata   0x00135b    program   0x000000
+        .idata_u2open.o_i    romdata   0x00135b    program   0x000000
+        .romdata_u1open.o    romdata   0x00135b    program   0x000000
+        .idata_u1open.o_i    romdata   0x00135b    program   0x000000
+            .code_setup.o       code   0x00135c    program   0x0000c0
+           .code_u1defs.o       code   0x00135c    program   0x000000
+            .code_c018i.o       code   0x00135c    program   0x000000
+           .code_u2defs.o       code   0x00135c    program   0x000000
+             .code_main.o       code   0x00135c    program   0x000000
+               _cinit_scn       code   0x00141c    program   0x00009e
+           .code_u2open.o       code   0x0014ba    program   0x000078
+           .code_u1open.o       code   0x001532    program   0x000072
+                   STRING       code   0x0015a4    program   0x000066
+           .code_u2read.o       code   0x00160a    program   0x00003e
+           .code_u1read.o       code   0x001648    program   0x00003e
+          .code_u2write.o       code   0x001686    program   0x00002e
+          .code_u1write.o       code   0x0016b4    program   0x00002e
+           .code_u2baud.o       code   0x0016e2    program   0x000022
+           .code_u1baud.o       code   0x001704    program   0x000022
+                    .code       code   0x001726    program   0x000020
+             _startup_scn       code   0x001746    program   0x00001c
+             .stringtable    romdata   0x001762    program   0x000006
+           .code___init.o       code   0x001768    program   0x000002
       .config_3ff8_main.o    romdata   0x003ff8    program   0x000001
       .config_3ff9_main.o    romdata   0x003ff9    program   0x000001
       .config_3ffa_main.o    romdata   0x003ffa    program   0x000001
       .config_3ffd_main.o    romdata   0x003ffd    program   0x000001
                 MATH_DATA      udata   0x000000       data   0x00000b
-                 .tmpdata      udata   0x00000b       data   0x000002
-            .udata_main.o      udata   0x000060       data   0x000019
-           .udata_c018i.o      udata   0x000079       data   0x00000a
-          .udata_u2defs.o      udata   0x000083       data   0x000001
-          .udata_u1defs.o      udata   0x000084       data   0x000001
-          .udata_u2open.o      udata   0x000085       data   0x000000
-          .idata_u2open.o      idata   0x000085       data   0x000000
-          .udata_u1read.o      udata   0x000085       data   0x000000
-          .idata_u1read.o      idata   0x000085       data   0x000000
-          .udata_u2read.o      udata   0x000085       data   0x000000
-          .idata_u2read.o      idata   0x000085       data   0x000000
-          .idata_u1defs.o      idata   0x000085       data   0x000000
-          .idata_u2defs.o      idata   0x000085       data   0x000000
-         .udata_u1write.o      udata   0x000085       data   0x000000
-         .idata_u1write.o      idata   0x000085       data   0x000000
-         .udata_u2write.o      udata   0x000085       data   0x000000
-         .idata_u2write.o      idata   0x000085       data   0x000000
-          .udata___init.o      udata   0x000085       data   0x000000
-          .idata___init.o      idata   0x000085       data   0x000000
-          .udata_u1baud.o      udata   0x000085       data   0x000000
-          .idata_u1baud.o      idata   0x000085       data   0x000000
-          .udata_u2baud.o      udata   0x000085       data   0x000000
-          .idata_u2baud.o      idata   0x000085       data   0x000000
-          .idata_u1open.o      idata   0x000085       data   0x000000
-          .udata_u1open.o      udata   0x000085       data   0x000000
-           .idata_c018i.o      idata   0x000085       data   0x000000
-            .idata_main.o      idata   0x000085       data   0x000000
-           .udata_setup.o      udata   0x000085       data   0x000000
-           .idata_setup.o      idata   0x000085       data   0x000000
+                 .tmpdata      udata   0x00000b       data   0x000003
+            .udata_main.o      udata   0x000060       data   0x000027
+           .udata_c018i.o      udata   0x000087       data   0x00000a
+          .udata_u2defs.o      udata   0x000091       data   0x000001
+          .udata_u1defs.o      udata   0x000092       data   0x000001
+          .udata_u2open.o      udata   0x000093       data   0x000000
+          .idata_u2open.o      idata   0x000093       data   0x000000
+          .udata_u1read.o      udata   0x000093       data   0x000000
+          .idata_u1read.o      idata   0x000093       data   0x000000
+          .udata_u2read.o      udata   0x000093       data   0x000000
+          .idata_u2read.o      idata   0x000093       data   0x000000
+          .idata_u1defs.o      idata   0x000093       data   0x000000
+          .idata_u2defs.o      idata   0x000093       data   0x000000
+         .udata_u1write.o      udata   0x000093       data   0x000000
+         .idata_u1write.o      idata   0x000093       data   0x000000
+         .udata_u2write.o      udata   0x000093       data   0x000000
+         .idata_u2write.o      idata   0x000093       data   0x000000
+          .udata___init.o      udata   0x000093       data   0x000000
+          .idata___init.o      idata   0x000093       data   0x000000
+          .udata_u1baud.o      udata   0x000093       data   0x000000
+          .idata_u1baud.o      idata   0x000093       data   0x000000
+          .udata_u2baud.o      udata   0x000093       data   0x000000
+          .idata_u2baud.o      idata   0x000093       data   0x000000
+          .idata_u1open.o      idata   0x000093       data   0x000000
+          .udata_u1open.o      udata   0x000093       data   0x000000
+           .idata_c018i.o      idata   0x000093       data   0x000000
+            .idata_main.o      idata   0x000093       data   0x000000
+           .udata_setup.o      udata   0x000093       data   0x000000
+           .idata_setup.o      idata   0x000093       data   0x000000
                    udata1      udata   0x000200       data   0x000100
                    udata2      udata   0x000300       data   0x000100
+                   udata3      udata   0x000400       data   0x000100
                    .stack      udata   0x000d00       data   0x000100
               SFR_BANKED0      udata   0x000ec6       data   0x00000e
               SFR_BANKED1      udata   0x000ed7       data   0x000002
@@ -109,79 +110,88 @@ Linker Map File - Created Sat Mar 04 14:51:24 2017
                               Program Memory Usage 
                                Start         End      
                            ---------   ---------      
-                            0x000000    0x00109e      
-                            0x0010a0    0x00147d      
+                            0x000000    0x00135a      
+                            0x00135c    0x001769      
                             0x003ff8    0x003ffa      
                             0x003ffd    0x003ffd      
-            5249 out of 16386 program addresses used, program memory utilization is 32%
+            5997 out of 16386 program addresses used, program memory utilization is 36%
 
 
 
                               Symbols - Sorted by Name
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
-     InterruptHandlerHigh   0x00000e    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-      InterruptVectorHigh   0x000008    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-               Open1USART   0x001268    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\u1open.c
-               Open2USART   0x0011f0    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\u2open.c
-               Read1USART   0x001362    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\u1read.c
-               Read2USART   0x001324    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\u2read.c
-              Write1USART   0x0013ce    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\u1write.c
-              Write2USART   0x0013a0    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\u2write.c
-                   _2jEnd   0x00130e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
-       ___return_lbl00000   0x000004    program     static                          
+     InterruptHandlerHigh   0x00000e    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+      InterruptVectorHigh   0x000008    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+               Open1USART   0x001532    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\u1open.c
+               Open2USART   0x0014ba    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\u2open.c
+               Read1USART   0x001648    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\u1read.c
+               Read2USART   0x00160a    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\u2read.c
+              Write1USART   0x0016b4    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\u1write.c
+              Write2USART   0x001686    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\u2write.c
+                   _2jEnd   0x0015f4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
        ___return_lbl00000   0x00000c    program     static                          
-       ___return_lbl00000   0x001150    program     static                          
-       ___return_lbl00001   0x00147a    program     static                          
-       ___return_lbl00002   0x0011ee    program     static                          
-               __config_0   0x003ff8    program     static C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-               __config_1   0x003ff9    program     static C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-               __config_2   0x003ffa    program     static C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-               __config_3   0x003ffd    program     static C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-                   __init   0x00147c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
-              __tmplbl_11   0x00045c    program     static                          
-            __zero_memory   0x001440    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                _do_cinit   0x001152    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+       ___return_lbl00000   0x000004    program     static                          
+       ___return_lbl00000   0x00141a    program     static                          
+       ___return_lbl00001   0x001760    program     static                          
+       ___return_lbl00002   0x0014b8    program     static                          
+               __config_0   0x003ff8    program     static C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+               __config_1   0x003ff9    program     static C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+               __config_2   0x003ffa    program     static C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+               __config_3   0x003ffd    program     static C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+                   __init   0x001768    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
+              __string_38   0x001766    program     static C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+              __string_39   0x001762    program     static C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+              __tmplbl_17   0x000634    program     static                          
+            __zero_memory   0x001726    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                _do_cinit   0x00141c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                    _entry   0x000000    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                 _startup   0x001460    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-               baud1USART   0x00141e    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\u1baud.c
-               baud2USART   0x0013fc    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\u2baud.c
-                     cmsg   0x000e70    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-                compare_l   0x001456    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-          connection_mode   0x000eaa    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-                copy_loop   0x0011c4    program     static                          
-            copy_one_byte   0x0011ca    program     static                          
-                     done   0x0011ee    program     static                          
-             done_copying   0x0011d8    program     static                          
-                 get_time   0x000108    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-              http_header   0x000fc2    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-                http_post   0x001046    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-                 http_put   0x00106a    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-                       ip   0x000eb1    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-                     jEnd   0x001310    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
-                    jLoop   0x0012f8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
-                     loop   0x001470    program     static                          
-                   loop_h   0x00144e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                   loop_l   0x001458    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                     main   0x0003ca    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-                msg_check   0x000338    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-                     pass   0x000e99    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-                     port   0x000ec3    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-             post_content   0x001060    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-      post_content_length   0x00105e    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-       post_packet_length   0x00105a    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-              put_content   0x001087    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-       put_content_length   0x001084    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-        put_packet_length   0x001080    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-                 send_msg   0x000288    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-             send_msg_ram   0x000208    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-                    setup   0x0010a0    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\setup.c
-                     ssid   0x000e88    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-                strlenpgm   0x0012da    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
-                     test   0x00116c    program     static                          
-                wifi_cmds   0x000f32    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-                     wmsg   0x000ec6    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-               zero_block   0x00144e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                 _startup   0x001746    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+               baud1USART   0x001704    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\u1baud.c
+               baud2USART   0x0016e2    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\u2baud.c
+                     cmsg   0x001116    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+                compare_l   0x00173c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+          connection_mode   0x001146    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+                copy_loop   0x00148e    program     static                          
+                 copy_msg   0x0002a4    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+            copy_one_byte   0x001494    program     static                          
+                     done   0x0014b8    program     static                          
+             done_copying   0x0014a2    program     static                          
+                  get_key   0x00012a    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+                 get_time   0x0001a4    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+              http_header   0x00127a    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+                http_post   0x0012fe    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+                 http_put   0x001322    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+                       ip   0x00114d    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+                     jEnd   0x0015f6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
+                     jEnd   0x0015be    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\strlen.asm
+                    jLoop   0x0015de    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
+                    jLoop   0x0015b4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\strlen.asm
+                     loop   0x001756    program     static                          
+                   loop_h   0x001734    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                   loop_l   0x00173e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                     main   0x000598    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+                msg_check   0x000506    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+                     port   0x00115f    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+             post_content   0x001318    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+      post_content_length   0x001316    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+       post_packet_length   0x001312    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+              put_content   0x001343    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+       put_content_length   0x001340    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+       put_packet_length1   0x001338    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+       put_packet_length2   0x00133c    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+                send_char   0x00031e    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+            send_char_ram   0x000382    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+                 send_msg   0x000456    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+             send_msg_ram   0x0003d6    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+                    setup   0x00135c    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\setup.c
+                   strlen   0x0015a4    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\strlen.asm
+                strlenpgm   0x0015c0    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
+                     test   0x001436    program     static                          
+                      url   0x0011ce    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+                wifi_cmds   0x0011ea    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+                     wmsg   0x001162    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+               zero_block   0x001734    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                    ADCON0   0x000fc2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                ADCON0bits   0x000fc2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                    ADCON1   0x000fc1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
@@ -556,8 +566,8 @@ Linker Map File - Created Sat Mar 04 14:51:24 2017
                   UIEbits   0x000f36       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                       UIR   0x000f62       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                   UIRbits   0x000f62       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-            USART1_Status   0x000084       data     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\u1defs.c
-            USART2_Status   0x000083       data     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\u2defs.c
+            USART1_Status   0x000092       data     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\u1defs.c
+            USART2_Status   0x000091       data     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\u2defs.c
                     USTAT   0x000f64       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                 USTATbits   0x000f64       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                    WDTCON   0x000fc0       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
@@ -578,20 +588,25 @@ Linker Map File - Created Sat Mar 04 14:51:24 2017
                   __REMB1   0x000002       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
                   __REMB2   0x000001       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
                   __REMB3   0x000000       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                  __tmp_0   0x00000b       data     static C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-                  __tmp_0   0x00000b       data     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\u1open.c
                   __tmp_0   0x00000b       data     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\u2open.c
-                  buffer1   0x000060       data     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-                  buffer2   0x000066       data     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-                curr_byte   0x00007c       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-               curr_entry   0x00007e       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                 data_ptr   0x000080       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                      key   0x00006c       data     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-                     prom   0x000079       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     time   0x000077       data     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-              time_string   0x000072       data     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-             uart1_buffer   0x000200       data     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-             uart2_buffer   0x000300       data     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
+                  __tmp_0   0x00000b       data     static C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+                  __tmp_0   0x00000b       data     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\u1open.c
+                  buffer1   0x000060       data     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+                  buffer2   0x000066       data     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+                curr_byte   0x00008a       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+               curr_entry   0x00008c       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                 data_ptr   0x00008e       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                      key   0x00006c       data     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+                     pass   0x000480       data     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+                     prom   0x000087       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                    pulse   0x000083       data     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+               pulse_flag   0x000085       data     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+                     ssid   0x000400       data     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+                     time   0x000081       data     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+                time_flag   0x000086       data     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+              time_string   0x00007c       data     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+             uart1_buffer   0x000200       data     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+             uart2_buffer   0x000300       data     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
 
 
 
@@ -600,66 +615,75 @@ Linker Map File - Created Sat Mar 04 14:51:24 2017
                 ---------  ---------  ---------  --------- ---------                
                    _entry   0x000000    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
        ___return_lbl00000   0x000004    program     static                          
-      InterruptVectorHigh   0x000008    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
+      InterruptVectorHigh   0x000008    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
        ___return_lbl00000   0x00000c    program     static                          
-     InterruptHandlerHigh   0x00000e    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-                 get_time   0x000108    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-             send_msg_ram   0x000208    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-                 send_msg   0x000288    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-                msg_check   0x000338    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-                     main   0x0003ca    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-              __tmplbl_11   0x00045c    program     static                          
-                     cmsg   0x000e70    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-                     ssid   0x000e88    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-                     pass   0x000e99    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-          connection_mode   0x000eaa    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-                       ip   0x000eb1    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-                     port   0x000ec3    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-                     wmsg   0x000ec6    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-                wifi_cmds   0x000f32    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-              http_header   0x000fc2    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-                http_post   0x001046    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-       post_packet_length   0x00105a    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-      post_content_length   0x00105e    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-             post_content   0x001060    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-                 http_put   0x00106a    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-        put_packet_length   0x001080    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-       put_content_length   0x001084    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-              put_content   0x001087    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-                    setup   0x0010a0    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\setup.c
-       ___return_lbl00000   0x001150    program     static                          
-                _do_cinit   0x001152    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     test   0x00116c    program     static                          
-                copy_loop   0x0011c4    program     static                          
-            copy_one_byte   0x0011ca    program     static                          
-             done_copying   0x0011d8    program     static                          
-                     done   0x0011ee    program     static                          
-       ___return_lbl00002   0x0011ee    program     static                          
-               Open2USART   0x0011f0    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\u2open.c
-               Open1USART   0x001268    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\u1open.c
-                strlenpgm   0x0012da    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
-                    jLoop   0x0012f8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
-                   _2jEnd   0x00130e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
-                     jEnd   0x001310    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
-               Read2USART   0x001324    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\u2read.c
-               Read1USART   0x001362    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\u1read.c
-              Write2USART   0x0013a0    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\u2write.c
-              Write1USART   0x0013ce    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\u1write.c
-               baud2USART   0x0013fc    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\u2baud.c
-               baud1USART   0x00141e    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\u1baud.c
-            __zero_memory   0x001440    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-               zero_block   0x00144e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                   loop_h   0x00144e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                compare_l   0x001456    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                   loop_l   0x001458    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                 _startup   0x001460    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     loop   0x001470    program     static                          
-       ___return_lbl00001   0x00147a    program     static                          
-                   __init   0x00147c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
-               __config_0   0x003ff8    program     static C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-               __config_1   0x003ff9    program     static C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-               __config_2   0x003ffa    program     static C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-               __config_3   0x003ffd    program     static C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
+     InterruptHandlerHigh   0x00000e    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+                  get_key   0x00012a    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+                 get_time   0x0001a4    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+                 copy_msg   0x0002a4    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+                send_char   0x00031e    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+            send_char_ram   0x000382    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+             send_msg_ram   0x0003d6    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+                 send_msg   0x000456    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+                msg_check   0x000506    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+                     main   0x000598    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+              __tmplbl_17   0x000634    program     static                          
+                     cmsg   0x001116    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+          connection_mode   0x001146    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+                       ip   0x00114d    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+                     port   0x00115f    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+                     wmsg   0x001162    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+                      url   0x0011ce    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+                wifi_cmds   0x0011ea    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+              http_header   0x00127a    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+                http_post   0x0012fe    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+       post_packet_length   0x001312    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+      post_content_length   0x001316    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+             post_content   0x001318    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+                 http_put   0x001322    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+       put_packet_length1   0x001338    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+       put_packet_length2   0x00133c    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+       put_content_length   0x001340    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+              put_content   0x001343    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+                    setup   0x00135c    program     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\setup.c
+       ___return_lbl00000   0x00141a    program     static                          
+                _do_cinit   0x00141c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     test   0x001436    program     static                          
+                copy_loop   0x00148e    program     static                          
+            copy_one_byte   0x001494    program     static                          
+             done_copying   0x0014a2    program     static                          
+       ___return_lbl00002   0x0014b8    program     static                          
+                     done   0x0014b8    program     static                          
+               Open2USART   0x0014ba    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\u2open.c
+               Open1USART   0x001532    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\u1open.c
+                   strlen   0x0015a4    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\strlen.asm
+                    jLoop   0x0015b4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\strlen.asm
+                     jEnd   0x0015be    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\strlen.asm
+                strlenpgm   0x0015c0    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
+                    jLoop   0x0015de    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
+                   _2jEnd   0x0015f4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
+                     jEnd   0x0015f6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
+               Read2USART   0x00160a    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\u2read.c
+               Read1USART   0x001648    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\u1read.c
+              Write2USART   0x001686    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\u2write.c
+              Write1USART   0x0016b4    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\u1write.c
+               baud2USART   0x0016e2    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\u2baud.c
+               baud1USART   0x001704    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\u1baud.c
+            __zero_memory   0x001726    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+               zero_block   0x001734    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                   loop_h   0x001734    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                compare_l   0x00173c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                   loop_l   0x00173e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                 _startup   0x001746    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     loop   0x001756    program     static                          
+       ___return_lbl00001   0x001760    program     static                          
+              __string_39   0x001762    program     static C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+              __string_38   0x001766    program     static C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+                   __init   0x001768    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
+               __config_0   0x003ff8    program     static C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+               __config_1   0x003ff9    program     static C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+               __config_2   0x003ffa    program     static C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+               __config_3   0x003ffd    program     static C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
                  __AARGB7   0x000000       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
                   __REMB3   0x000000       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
                  __AARGB6   0x000001       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
@@ -674,24 +698,29 @@ Linker Map File - Created Sat Mar 04 14:51:24 2017
                  __AARGB0   0x000007       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
                    __AEXP   0x000008       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
                      SIGN   0x000009       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
-            __FPFLAGSbits   0x00000a       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
                 __FPFLAGS   0x00000a       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
-                  __tmp_0   0x00000b       data     static C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
+            __FPFLAGSbits   0x00000a       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
                   __tmp_0   0x00000b       data     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\u1open.c
+                  __tmp_0   0x00000b       data     static C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
                   __tmp_0   0x00000b       data     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\u2open.c
-                  buffer1   0x000060       data     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-                  buffer2   0x000066       data     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-                      key   0x00006c       data     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-              time_string   0x000072       data     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-                     time   0x000077       data     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-                     prom   0x000079       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                curr_byte   0x00007c       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-               curr_entry   0x00007e       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                 data_ptr   0x000080       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-            USART2_Status   0x000083       data     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\u2defs.c
-            USART1_Status   0x000084       data     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\u1defs.c
-             uart1_buffer   0x000200       data     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
-             uart2_buffer   0x000300       data     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v1.0\main.c
+                  buffer1   0x000060       data     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+                  buffer2   0x000066       data     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+                      key   0x00006c       data     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+              time_string   0x00007c       data     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+                     time   0x000081       data     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+                    pulse   0x000083       data     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+               pulse_flag   0x000085       data     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+                time_flag   0x000086       data     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+                     prom   0x000087       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                curr_byte   0x00008a       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+               curr_entry   0x00008c       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                 data_ptr   0x00008e       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+            USART2_Status   0x000091       data     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\u2defs.c
+            USART1_Status   0x000092       data     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\u1defs.c
+             uart1_buffer   0x000200       data     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+             uart2_buffer   0x000300       data     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+                     ssid   0x000400       data     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
+                     pass   0x000480       data     extern C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\dev_core\main.c
                     RPOR0   0x000ec6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                     RPOR1   0x000ec7       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                     RPOR2   0x000ec8       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
@@ -723,26 +752,26 @@ Linker Map File - Created Sat Mar 04 14:51:24 2017
                   RPINR22   0x000efc       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                   RPINR23   0x000efd       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                   RPINR24   0x000efe       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                   PPSCON   0x000eff       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                PPSCONbits   0x000eff       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                   PPSCON   0x000eff       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                  UEP0bits   0x000f26       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                      UEP0   0x000f26       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                      UEP1   0x000f27       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                  UEP1bits   0x000f27       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                     UEP2   0x000f28       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                  UEP2bits   0x000f28       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                     UEP2   0x000f28       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                  UEP3bits   0x000f29       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                      UEP3   0x000f29       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                     UEP4   0x000f2a       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                  UEP4bits   0x000f2a       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                 UEP5bits   0x000f2b       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                     UEP4   0x000f2a       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                      UEP5   0x000f2b       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                 UEP5bits   0x000f2b       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                  UEP6bits   0x000f2c       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                      UEP6   0x000f2c       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                     UEP7   0x000f2d       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                  UEP7bits   0x000f2d       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                     UEP8   0x000f2e       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                     UEP7   0x000f2d       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                  UEP8bits   0x000f2e       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                     UEP8   0x000f2e       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                  UEP9bits   0x000f2f       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                      UEP9   0x000f2f       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                     UEP10   0x000f30       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
@@ -753,84 +782,84 @@ Linker Map File - Created Sat Mar 04 14:51:24 2017
                 UEP12bits   0x000f32       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                     UEP13   0x000f33       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                 UEP13bits   0x000f33       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                    UEP14   0x000f34       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                 UEP14bits   0x000f34       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                    UEP15   0x000f35       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                    UEP14   0x000f34       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                 UEP15bits   0x000f35       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                      UIE   0x000f36       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                    UEP15   0x000f35       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                   UIEbits   0x000f36       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                      UIE   0x000f36       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                      UEIE   0x000f37       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                  UEIEbits   0x000f37       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                    UADDR   0x000f38       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                 UADDRbits   0x000f38       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                 UCFGbits   0x000f39       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                    UADDR   0x000f38       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                      UCFG   0x000f39       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                 UCFGbits   0x000f39       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
               PADCFG1bits   0x000f3c       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                   PADCFG1   0x000f3c       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-              REFOCONbits   0x000f3d       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                   REFOCON   0x000f3d       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+              REFOCONbits   0x000f3d       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                    RTCCAL   0x000f3e       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                RTCCALbits   0x000f3e       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                    RTCCFG   0x000f3f       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                RTCCFGbits   0x000f3f       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                ODCON3bits   0x000f40       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                    ODCON3   0x000f40       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-               ODCON2bits   0x000f41       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                    ODCON2   0x000f41       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+               ODCON2bits   0x000f41       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                    ODCON1   0x000f42       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                ODCON1bits   0x000f42       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-               ANCON0bits   0x000f48       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                    ANCON0   0x000f48       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+               ANCON0bits   0x000f48       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                ANCON1bits   0x000f49       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                    ANCON1   0x000f49       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                   DSWAKEL   0x000f4a       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
               DSWAKELbits   0x000f4a       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-              DSWAKEHbits   0x000f4b       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                   DSWAKEH   0x000f4b       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+              DSWAKEHbits   0x000f4b       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                DSCONLbits   0x000f4c       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                    DSCONL   0x000f4c       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                DSCONHbits   0x000f4d       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                    DSCONH   0x000f4d       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                    DSGPR0   0x000f4e       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                    DSGPR1   0x000f4f       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                  TCLKCON   0x000f52       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
               TCLKCONbits   0x000f52       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                  TCLKCON   0x000f52       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                    CVRCON   0x000f53       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                CVRCONbits   0x000f53       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                     UFRM   0x000f60       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                 UFRMLbits   0x000f60       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                     UFRML   0x000f60       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                     UFRM   0x000f60       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                UFRMHbits   0x000f61       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                     UFRMH   0x000f61       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                  UIRbits   0x000f62       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                UFRMHbits   0x000f61       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                       UIR   0x000f62       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                 UEIRbits   0x000f63       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                  UIRbits   0x000f62       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                      UEIR   0x000f63       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                 UEIRbits   0x000f63       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                 USTATbits   0x000f64       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                     USTAT   0x000f64       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                     UCON   0x000f65       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                  UCONbits   0x000f65       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                     UCON   0x000f65       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                DMABCHbits   0x000f66       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                    DMABCH   0x000f66       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                    DMABCL   0x000f67       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
               RXADDRHbits   0x000f68       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                   RXADDRH   0x000f68       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                   RXADDRL   0x000f69       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-              TXADDRHbits   0x000f6a       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                   TXADDRH   0x000f6a       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+              TXADDRHbits   0x000f6a       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                   TXADDRL   0x000f6b       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                CMSTATbits   0x000f70       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
              CMSTATUSbits   0x000f70       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                  CMSTATUS   0x000f70       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                    CMSTAT   0x000f70       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-             SSP2CON2bits   0x000f71       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                  SSP2CON2   0x000f71       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-             SSP2CON1bits   0x000f72       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+             SSP2CON2bits   0x000f71       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                  SSP2CON1   0x000f72       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-             SSP2STATbits   0x000f73       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+             SSP2CON1bits   0x000f72       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                  SSP2STAT   0x000f73       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                  SSP2ADD   0x000f74       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+             SSP2STATbits   0x000f73       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
               SSP2ADDbits   0x000f74       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                  SSP2ADD   0x000f74       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                   SSP2BUF   0x000f75       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                     T4CON   0x000f76       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                 T4CONbits   0x000f76       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
@@ -843,77 +872,77 @@ Linker Map File - Created Sat Mar 04 14:51:24 2017
                  BAUDCON2   0x000f7c       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
              BAUDCON2bits   0x000f7c       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                   SPBRGH2   0x000f7d       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                  BAUDCON   0x000f7e       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                 BAUDCON1   0x000f7e       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
              BAUDCON1bits   0x000f7e       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
               BAUDCONbits   0x000f7e       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                   BAUDCTL   0x000f7e       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                 BAUDCON1   0x000f7e       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                  BAUDCON   0x000f7e       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
               BAUDCTLbits   0x000f7e       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                   SPBRGH   0x000f7f       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                   SPBRGH1   0x000f7f       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                   SPBRGH   0x000f7f       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                 PORTAbits   0x000f80       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                     PORTA   0x000f80       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                 PORTBbits   0x000f81       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                     PORTB   0x000f81       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                 PORTCbits   0x000f82       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                     PORTC   0x000f82       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                  HLVDCON   0x000f85       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
               HLVDCONbits   0x000f85       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                  HLVDCON   0x000f85       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
               DMACON2bits   0x000f86       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                   DMACON2   0x000f86       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-              DMACON1bits   0x000f88       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                   DMACON1   0x000f88       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+              DMACON1bits   0x000f88       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                  LATAbits   0x000f89       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                      LATA   0x000f89       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                     LATB   0x000f8a       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                  LATBbits   0x000f8a       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                     LATC   0x000f8b       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                     LATB   0x000f8a       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                  LATCbits   0x000f8b       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                     LATC   0x000f8b       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                  ALRMVALL   0x000f8e       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                  ALRMVALH   0x000f8f       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
               ALRMRPTbits   0x000f90       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                   ALRMRPT   0x000f90       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                  ALRMCFG   0x000f91       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
               ALRMCFGbits   0x000f91       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                  ALRMCFG   0x000f91       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                 TRISAbits   0x000f92       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                     TRISA   0x000f92       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                TRISBbits   0x000f93       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                     TRISB   0x000f93       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                TRISCbits   0x000f94       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                TRISBbits   0x000f93       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                     TRISC   0x000f94       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                   T3GCON   0x000f97       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                TRISCbits   0x000f94       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                T3GCONbits   0x000f97       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                   T3GCON   0x000f97       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                   RTCVALL   0x000f98       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                   RTCVALH   0x000f99       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                   T1GCON   0x000f9a       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                T1GCONbits   0x000f9a       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                   T1GCON   0x000f9a       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                   OSCTUNE   0x000f9b       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
               OSCTUNEbits   0x000f9b       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                RCSTA2bits   0x000f9c       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                    RCSTA2   0x000f9c       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                 PIE1bits   0x000f9d       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                      PIE1   0x000f9d       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                 PIE1bits   0x000f9d       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                  PIR1bits   0x000f9e       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                      PIR1   0x000f9e       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                 IPR1bits   0x000f9f       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                      IPR1   0x000f9f       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                 IPR1bits   0x000f9f       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                      PIE2   0x000fa0       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                  PIE2bits   0x000fa0       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                  PIR2bits   0x000fa1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                      PIR2   0x000fa1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                      IPR2   0x000fa2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                  IPR2bits   0x000fa2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                     PIE3   0x000fa3       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                  PIE3bits   0x000fa3       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                 PIR3bits   0x000fa4       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                     PIE3   0x000fa3       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                      PIR3   0x000fa4       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                     IPR3   0x000fa5       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                 PIR3bits   0x000fa4       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                  IPR3bits   0x000fa5       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                   EECON1   0x000fa6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                     IPR3   0x000fa5       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                EECON1bits   0x000fa6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                   EECON1   0x000fa6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                    EECON2   0x000fa7       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-               TXSTA2bits   0x000fa8       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                    TXSTA2   0x000fa8       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+               TXSTA2bits   0x000fa8       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                    TXREG2   0x000fa9       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                    RCREG2   0x000faa       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                    SPBRG2   0x000fab       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
@@ -921,48 +950,48 @@ Linker Map File - Created Sat Mar 04 14:51:24 2017
                RCSTA1bits   0x000fac       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                    RCSTA1   0x000fac       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                     RCSTA   0x000fac       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                    TXSTA   0x000fad       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                   TXSTA1   0x000fad       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-               TXSTA1bits   0x000fad       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                 TXSTAbits   0x000fad       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                    TXREG   0x000fae       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+               TXSTA1bits   0x000fad       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                   TXSTA1   0x000fad       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                    TXSTA   0x000fad       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                    TXREG1   0x000fae       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                    TXREG   0x000fae       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                    RCREG1   0x000faf       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                     RCREG   0x000faf       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                   SPBRG1   0x000fb0       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                     SPBRG   0x000fb0       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                   SPBRG1   0x000fb0       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                  CTMUICON   0x000fb1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
              CTMUICONbits   0x000fb1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
              CTMUCONLbits   0x000fb2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                  CTMUCONL   0x000fb2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-             CTMUCONHbits   0x000fb3       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                  CTMUCONH   0x000fb3       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                 ECCP2CON   0x000fb4       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-              CCP2CONbits   0x000fb4       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+             CTMUCONHbits   0x000fb3       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
              ECCP2CONbits   0x000fb4       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                   CCP2CON   0x000fb4       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+              CCP2CONbits   0x000fb4       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                 ECCP2CON   0x000fb4       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                     CCPR2   0x000fb5       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                    CCPR2L   0x000fb5       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                    CCPR2H   0x000fb6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+             ECCP2DELbits   0x000fb7       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                 ECCP2DEL   0x000fb7       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
               PWM2CONbits   0x000fb7       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                   PWM2CON   0x000fb7       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                 ECCP2DEL   0x000fb7       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-             ECCP2DELbits   0x000fb7       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
               ECCP2ASbits   0x000fb8       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                   ECCP2AS   0x000fb8       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
              PSTR2CONbits   0x000fb9       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                  PSTR2CON   0x000fb9       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                  CCP1CON   0x000fba       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-              CCP1CONbits   0x000fba       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                  ECCP1CON   0x000fba       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+              CCP1CONbits   0x000fba       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
              ECCP1CONbits   0x000fba       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                  CCP1CON   0x000fba       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                     CCPR1   0x000fbb       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                    CCPR1L   0x000fbb       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                    CCPR1H   0x000fbc       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
               PWM1CONbits   0x000fbd       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                   PWM1CON   0x000fbd       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                 ECCP1DEL   0x000fbd       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
              ECCP1DELbits   0x000fbd       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                 ECCP1DEL   0x000fbd       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                   ECCP1AS   0x000fbe       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
               ECCP1ASbits   0x000fbe       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
              PSTR1CONbits   0x000fbf       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
@@ -971,57 +1000,57 @@ Linker Map File - Created Sat Mar 04 14:51:24 2017
                WDTCONbits   0x000fc0       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                ADCON1bits   0x000fc1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                    ADCON1   0x000fc1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                   ADCON0   0x000fc2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                ADCON0bits   0x000fc2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                   ADRESL   0x000fc3       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                   ADCON0   0x000fc2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                     ADRES   0x000fc3       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                   ADRESL   0x000fc3       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                    ADRESH   0x000fc4       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                   SSPCON2   0x000fc5       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
               SSPCON2bits   0x000fc5       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
              SSP1CON2bits   0x000fc5       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                  SSP1CON2   0x000fc5       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                  SSPCON1   0x000fc6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
               SSPCON1bits   0x000fc6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
              SSP1CON1bits   0x000fc6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                  SSP1CON1   0x000fc6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                  SSPCON1   0x000fc6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                  SSPSTAT   0x000fc7       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-              SSPSTATbits   0x000fc7       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                  SSP1STAT   0x000fc7       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
              SSP1STATbits   0x000fc7       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+              SSPSTATbits   0x000fc7       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                  SSPSTAT   0x000fc7       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                SSPADDbits   0x000fc8       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-              SSP1ADDbits   0x000fc8       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                  SSP1ADD   0x000fc8       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                    SSPADD   0x000fc8       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                   SSPBUF   0x000fc9       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                  SSP1ADD   0x000fc8       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+              SSP1ADDbits   0x000fc8       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                   SSP1BUF   0x000fc9       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                   SSPBUF   0x000fc9       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                     T2CON   0x000fca       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                 T2CONbits   0x000fca       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                       PR2   0x000fcb       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                      TMR2   0x000fcc       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                    T1CON   0x000fcd       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                 T1CONbits   0x000fcd       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                    T1CON   0x000fcd       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                     TMR1L   0x000fce       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                     TMR1H   0x000fcf       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                 RCONbits   0x000fd0       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                      RCON   0x000fd0       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                   CM2CON   0x000fd1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                  CM2CON1   0x000fd1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-              CM2CON1bits   0x000fd1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                 RCONbits   0x000fd0       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                CM2CONbits   0x000fd1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+              CM2CON1bits   0x000fd1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                  CM2CON1   0x000fd1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                   CM2CON   0x000fd1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                CM1CONbits   0x000fd2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
               CM1CON1bits   0x000fd2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                   CM1CON1   0x000fd2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                    CM1CON   0x000fd2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                    OSCCON   0x000fd3       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                OSCCONbits   0x000fd3       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                T0CONbits   0x000fd5       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                     T0CON   0x000fd5       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                T0CONbits   0x000fd5       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                     TMR0L   0x000fd6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                     TMR0H   0x000fd7       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                STATUSbits   0x000fd8       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                    STATUS   0x000fd8       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                    FSR2L   0x000fd9       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                      FSR2   0x000fd9       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                    FSR2L   0x000fd9       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                     FSR2H   0x000fda       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                    PLUSW2   0x000fdb       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                   PREINC2   0x000fdc       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
@@ -1052,12 +1081,12 @@ Linker Map File - Created Sat Mar 04 14:51:24 2017
               INTCON2bits   0x000ff1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                    INTCON   0x000ff2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                INTCONbits   0x000ff2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                     PROD   0x000ff3       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                     PRODL   0x000ff3       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                     PROD   0x000ff3       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                     PRODH   0x000ff4       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                    TABLAT   0x000ff5       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                   TBLPTR   0x000ff6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                   TBLPTRL   0x000ff6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                   TBLPTR   0x000ff6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                   TBLPTRH   0x000ff7       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                   TBLPTRU   0x000ff8       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                        PC   0x000ff9       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
@@ -1066,8 +1095,8 @@ Linker Map File - Created Sat Mar 04 14:51:24 2017
                    PCLATU   0x000ffb       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                STKPTRbits   0x000ffc       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                    STKPTR   0x000ffc       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
-                      TOS   0x000ffd       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                      TOSL   0x000ffd       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
+                      TOS   0x000ffd       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                      TOSH   0x000ffe       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
                      TOSU   0x000fff       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f24j50.asm
 

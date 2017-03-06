@@ -1,3 +1,5 @@
+#include "stdint.h"
+
 /* defines */
 #define BUFFER1_SIZE 256
 #define BUFFER2_SIZE 256
@@ -24,7 +26,8 @@ typedef enum {
   C_SETUP,
   C_CONNECT,
   C_SSID,
-  C_PASS
+  C_PASS,
+  C_URL
 } CmdStates;
 
 typedef enum {
@@ -44,12 +47,18 @@ typedef enum {
   CONNECT_EXIT
 } ConnectStates;
 
+typedef enum {
+  PULSE_INIT,
+  PULSE_ON,
+  PULSE_OFF
+} PulseStates;
+
 typedef struct {
-  volatile unsigned char flag;
-  volatile unsigned char head;
-  unsigned char tail;
-  unsigned char echo;
-  unsigned char * mem;
+  volatile uint8_t flag;
+  volatile uint8_t head;
+  uint8_t tail;
+  uint8_t echo;
+  int8_t * mem;
 } Buffer_t;
 
 
@@ -57,23 +66,12 @@ typedef struct {
 void setup(void);
 void InterruptHandlerHigh(void);
 void sendstr();
-unsigned char buffer2_comp(unsigned char index, const far rom char * msg);
-unsigned char msg_check(unsigned char * mem, unsigned char index,
-			const far rom char * msg);
-void send_msg(const far rom char * msg, unsigned char dest);
-void send_msg_ram(far char * msg, unsigned char dest);
-
-
-/* const rom char *str_data1 = */
-/*   "PUT /bins/"; */
-/* const rom char *str_data2 = */
-/*   " HTTP/1.1\r\n" */
-/*    "HOST: api.myjson.com\r\n" */
-/*   "content-type: application/json\r\n" */
-/*   "content-length: 15\r\n" */
-/*   "connection: close\r\n" */
-/*   "\r\n"; */
-/* const rom char *str_data3 = */
-/*   "\r\n"; */
-/* const far rom char msg_strings[][8] = {"OK\r\n", */
-/* 				       "ready\r\n"}; */
+uint8_t buffer2_comp(uint8_t index, const far rom int8_t * msg);
+uint8_t msg_check(int8_t * mem, uint8_t index,
+		  const far rom int8_t * msg);
+void send_msg(const far rom int8_t * msg, uint8_t dest);
+void send_msg_ram(far int8_t * msg, uint8_t dest);
+void send_char(const far rom int8_t * c, uint8_t dest);
+void send_char_ram(int8_t * c, uint8_t dest);
+void copy_msg(int8_t * mem, uint8_t index, far int8_t * msg);
+void get_key(int8_t * mem, int8_t * key, uint8_t key_offset);

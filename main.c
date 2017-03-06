@@ -2,6 +2,7 @@
 #include <usart.h>
 #include <delays.h>
 #include <string.h>
+#include "stdint.h"
 #include "setup.h"
 
 #pragma config WDTEN   = OFF
@@ -15,59 +16,70 @@
 #pragma config IOL1WAY = OFF
 
 #pragma udata udata1=0x200
-unsigned char uart1_buffer[BUFFER1_SIZE];
+int8_t uart1_buffer[BUFFER1_SIZE];
 
 #pragma udata udata2=0x300
-unsigned char uart2_buffer[BUFFER2_SIZE];
+int8_t uart2_buffer[BUFFER2_SIZE];
+
+#pragma udata udata3=0x400
+far int8_t ssid[128];
+far int8_t pass[128];
 
 #pragma udata
 Buffer_t buffer1;
 Buffer_t buffer2;
-far char key[6];
-far char time_string[5];
-far unsigned int time;
+far int8_t key[16];
+far int8_t time_string[5];
+far uint16_t time;
+far uint16_t pulse;
+far uint8_t pulse_flag;
+far uint8_t time_flag;
 
 #pragma romdata
-const far rom char cmsg[][8] = {"setup",
-				"connect",
-				"upload"};
-const far rom char ssid[] = "\"164auburn-2.4\",";
-const far rom char pass[] = "\"novultures2017\"";
-const far rom char connection_mode[] = "\"TCP\",";
-const far rom char ip[] = "\"api.myjson.com\",";
-const far rom char port[] = "80";
+const far rom int8_t cmsg[][8] = {"setup",
+				  "connect",
+				  "upload",
+				  "ssid",
+				  "pass",
+				  "url"};
 
-const far rom char wmsg[][36] = {"OK\r\n",
-				 "WIFI GOT IP\r\n",
-				 "{\"uri\":\"http://api.myjson.com/bins/"};
+const far rom int8_t connection_mode[] = "\"TCP\",";
+const far rom int8_t ip[] = "\"api.myjson.com\",";
+const far rom int8_t port[] = "80";
 
-const far rom char wifi_cmds[][16] = {"\r\n",
-				      "AT\r\n",
-				      "AT+CWMODE=1\r\n",
-				      "AT+RST\r\n",
-				      "AT+CWDHCP=1,1\r\n",
-				      "AT+CWJAP=",
-				      "AT+CIPSTART=",
-				      "AT+CIPSEND=",
-				      "AT+CIPCLOSE\r\n"};
+const far rom int8_t wmsg[][36] = {"OK\r\n",
+				   "WIFI GOT IP\r\n",
+				   "{\"uri\":\"http://api.myjson.com/bins/"};
+const far rom int8_t url[] = "http://api.myjson.com/bins/";
+const far rom int8_t wifi_cmds[][16] = {"\r\n",
+					"AT\r\n",
+					"AT+CWMODE=1\r\n",
+					"AT+RST\r\n",
+					"AT+CWDHCP=1,1\r\n",
+					"AT+CWJAP=",
+					"AT+CIPSTART=",
+					"AT+CIPSEND=",
+					"AT+CIPCLOSE\r\n"};
 
-const far rom char http_header[][33] = {"HOST: api.myjson.com",
-					"CONTENT-TYPE: application/json",
-					"CONTENT-LENGTH: ",
-					"CONNECTION: close"};
+const far rom int8_t http_header[][33] = {"HOST: api.myjson.com",
+					  "CONTENT-TYPE: application/json",
+					  "CONTENT-LENGTH: ",
+					  "CONNECTION: close"};
 
-const far rom char http_post[] = "POST /bins HTTP/1.1";
-const far rom char post_packet_length[]  = "132";
-const far rom char post_content_length[] = "9";
-const far rom char post_content[] = "{\"0\":\"0\"}";
+const far rom int8_t http_post[] = "POST /bins HTTP/1.1";
+const far rom int8_t post_packet_length[]  = "132";
+const far rom int8_t post_content_length[] = "9";
+const far rom int8_t post_content[] = "{\"0\":\"0\"}";
 
-const far rom char http_put[][11] = {"PUT /bins/",
-				     " HTTP/1.1"};
-const far rom char put_packet_length[]   = "144";
-const far rom char put_content_length[]  = "15";
-const far rom char put_content[][8] = {"{\"",
-				      "time\":\"",
-				      "\"}"};
+const far rom int8_t http_put[][11] = {"PUT /bins/",
+				       " HTTP/1.1"};
+const far rom int8_t put_packet_length1[]   = "144";
+const far rom int8_t put_packet_length2[]   = "145";
+
+const far rom int8_t put_content_length[]  = "15";
+const far rom int8_t put_content[][8] = {"{\"",
+					 "time\":\"",
+					 "\"}"};
 
 #pragma code InterruptVectorHigh = 0x08
 void InterruptVectorHigh(void)
@@ -83,19 +95,45 @@ void InterruptHandlerHigh()
 	}
     }
   
-  if (PIR3bits.RC2IF) {
+  if(PIR3bits.RC2IF) {
       buffer2.mem[buffer2.head] = Read2USART();
       if(buffer2.mem[buffer2.head++] == '\n') {
 	  buffer2.flag++;
 	}
     }
+
+  if(INTCON3bits.INT1IF) {
+    if(!pulse_flag)
+      {
+	T0CONbits.TMR0ON = 1;	/* start timer */
+	INTCON2bits.INTEDG1 = 0; /* change to falling */
+	INTCON3bits.INT1IF = 0;
+	pulse_flag = 1;
+      }
+    else
+      {
+	T0CONbits.TMR0ON = 0;	/* stop timer */
+	INTCON2bits.INTEDG1 = 1; /* change to rising */
+	INTCON3bits.INT1IF = 0;
+	pulse_flag = 0;
+	time_flag = 1;
+      }
+  }
 }
-				      
-void get_time(far char * time_string)
-{
-  char digit;
   
-  digit  = (char)((time & 0xf000) >> 12);
+void get_key(int8_t * mem, int8_t * key, uint8_t key_offset)
+{
+  do {
+    *key++ = mem[key_offset++];
+  } while(mem[key_offset] != '\"');
+  *key = '\0';
+}
+
+void get_time(far int8_t * time_string)
+{
+  int8_t digit;
+  
+  digit  = (int8_t)((time & 0xf000) >> 12);
   digit += '0';
   if (digit > '9')
     {
@@ -103,7 +141,7 @@ void get_time(far char * time_string)
     }
   time_string[0] = digit;
   
-  digit  = (char)((time & 0x0f00) >> 8);
+  digit  = (int8_t)((time & 0x0f00) >> 8);
   digit += '0';
   if (digit > '9')
     {
@@ -111,7 +149,7 @@ void get_time(far char * time_string)
     }
   time_string[1] = digit;
 
-  digit  = (char)((time & 0x00f0) >> 4);
+  digit  = (int8_t)((time & 0x00f0) >> 4);
   digit += '0';
   if (digit > '9')
     {
@@ -119,7 +157,7 @@ void get_time(far char * time_string)
     }
   time_string[2] = digit;
 
-  digit  = (char)(time & 0x000f);
+  digit  = (int8_t)(time & 0x000f);
   digit += '0';
   if (digit > '9')
     {
@@ -128,7 +166,43 @@ void get_time(far char * time_string)
   time_string[3] = digit;
 }
 
-void send_msg_ram(far char * msg, unsigned char dest)
+void copy_msg(int8_t * mem, uint8_t index, far int8_t * msg)
+{
+  do {
+    *msg++ = mem[index++];
+  } while(mem[index] != '\r');
+  *msg = '\0';
+}
+
+void send_char(const far rom int8_t * c, uint8_t dest)
+{
+  if(dest == 1)
+    {
+      while(Busy1USART());
+      Write1USART(*c);
+    }
+  else if(dest == 2)
+    {
+      while(Busy2USART());
+      Write2USART(*c);
+    }
+}
+
+void send_char_ram(int8_t * c, uint8_t dest)
+{
+  if(dest == 1)
+    {
+      while(Busy1USART());
+      Write1USART(*c);
+    }
+  else if(dest == 2)
+    {
+      while(Busy2USART());
+      Write2USART(*c);
+    }
+}
+
+void send_msg_ram(far int8_t * msg, uint8_t dest)
 {
   if(dest == 1)
     {
@@ -146,7 +220,7 @@ void send_msg_ram(far char * msg, unsigned char dest)
     }
 }
 
-void send_msg(const far rom char * msg, unsigned char dest)
+void send_msg(const far rom int8_t * msg, uint8_t dest)
 {
   if(dest == 1)
     {
@@ -165,16 +239,21 @@ void send_msg(const far rom char * msg, unsigned char dest)
 
 }
 
-unsigned char msg_check(unsigned char * mem, unsigned char index,
-			const far rom char * msg)
+uint8_t msg_check(int8_t * mem, uint8_t index,
+		  const far rom int8_t * msg)
 {
-  unsigned char n = strlenpgm(msg);
-  
+  uint8_t n = strlenpgm(msg);
+ 
   while(n--)
     {
+      /* while(Busy1USART()); */
+      /* Write1USART(mem[index]); */
+      /* while(Busy1USART()); */
+      /* Write1USART(*msg); */
+
       if(mem[index++] != *msg++)
 	{ return 0; }
-    }
+   }
   return 1;
 }
 
@@ -190,19 +269,20 @@ void main(void)
   CmdStates cmd_state = C_IDLE;
   SetupStates setup_state = SETUP_AT;
   ConnectStates connect_state = CONNECT_AT;
+  PulseStates pulse_state = PULSE_INIT;
 
-  unsigned char wifi_ok;
-  unsigned char wifi_connected;
-  unsigned char wifi_ip;
-  unsigned char wifi_send_ready;
+  uint8_t wifi_ok;
+  uint8_t wifi_connected;
+  uint8_t wifi_ip;
+  uint8_t wifi_send_ready;
   
-  unsigned char cmd_busy = 0;
-  unsigned char key_offset = 0;
-  unsigned char connect_init = 1;
+  uint8_t cmd_busy = 0;
+  uint8_t key_offset = 0;
+  uint8_t connect_init = 1;
 
-  unsigned int time_data = 0;
-
-  char digit;
+  uint32_t time_sum = 0;
+  int8_t digit;
+  uint8_t pulse_count;
 
   setup();
 
@@ -224,23 +304,86 @@ void main(void)
   wifi_send_ready = 0;
 
   key_offset = 0;
-  key[0] = '\0';
-  key[1] = '\0';
-  key[2] = '\0';
-  key[3] = '\0';
-  key[4] = '\0';
-  key[5] = '\0';
 
-  time_string[0] = '0';
+  time_string[0] = '0';		/* use strcpy */
   time_string[1] = '0';
   time_string[2] = '0';
   time_string[3] = '0';
   time_string[4] = '\0';
 
   time = 0;
+
+  ssid[0] = '0'; 		/* use strcpy */
+  ssid[1] = '\0';
+ 
+  pass[0] = '0';		/* use strcpy */
+  pass[1] = '\0';
+
   while(1)
     {
-      time++;
+      /* implement WDT */
+      /* switch(pulse_state) { */
+      /* case(PULSE_INIT): */
+      /* 	if(!PORTBbits.RB0) { */
+      /* 	  INTCON3bits.INT1IF = 0; */
+      /* 	  INTCON2bits.INTEDG1 = 1; */
+      /* 	  INTCON3bits.INT1IE = 1; */
+      /* 	  time_flag = 0; */
+      /* 	  time_sum = 0; */
+      /* 	  pulse_count = 16; */
+      /* 	  pulse_state = PULSE_ON; */
+      /* 	  TMR0H = 0;		/\* reset timer0 *\/ */
+      /* 	  TMR0L = 0; */
+      /* 	  LATCbits.LATC2 = 1;	 /\* start pulse *\/ */
+      /* 	  Delay10TCYx(6); */
+      /* 	  LATCbits.LATC2 = 0; */
+      /* 	} */
+      /* 	break; */
+      /* case(PULSE_ON): */
+      /* 	if(pulse_count) */
+      /* 	  { */
+      /* 	    if(time_flag) { */
+      /* 	      pulse_count--; */
+      /* 	      time = TMR0L;		/\* read timer *\/ */
+      /* 	      time = TMR0H; */
+      /* 	      time = time << 8; */
+      /* 	      time |= TMR0L; */
+
+      /* 	      get_time(time_string); */
+      /* 	      send_msg_ram(time_string,1); */
+      /* 	      send_msg(wifi_cmds[0],1); */
+
+      /* 	      time_sum = time_sum + ((uint32_t)time); */
+      /* 	      time_flag = 0; */
+      /* 	      TMR0H = 0;		/\* reset timer0 *\/ */
+      /* 	      TMR0L = 0; */
+      /* 	      LATCbits.LATC2 = 1;	 /\* start pulse *\/ */
+      /* 	      Delay10TCYx(6); */
+      /* 	      LATCbits.LATC2 = 0; */
+      /* 	      Delay10KTCYx(60); */
+      /* 	    } */
+      /* 	  } */
+      /* 	else */
+      /* 	  { */
+      /* 	    time_sum = time_sum >> 4; */
+      /* 	    time = time_sum; */
+      /* 	    get_time(time_string); */
+      /* 	    send_msg(wifi_cmds[0],1); */
+      /* 	    send_msg_ram(time_string,1); */
+      /* 	    send_msg(wifi_cmds[0],1); */
+      /* 	    pulse_state = PULSE_OFF; */
+      /* 	  } */
+      /* 	break; */
+      /* case(PULSE_OFF): */
+      /* 	/\* enter sleep *\/ */
+      /* 	Delay10KTCYx(255); */
+      /* 	pulse_state = PULSE_INIT; */
+      /* 	break; */
+      /* default: */
+      /* 	break; */
+      /* } */
+
+      /* time++; */
       get_time(time_string);
 
       /* computer port echo */
@@ -259,44 +402,54 @@ void main(void)
 	  }
 	break;
       case(P_READY):
-	if(msg_check(buffer1.mem,buffer1.tail,cmsg[0]))
+	if(!cmd_busy)
 	  {
-	    if(!cmd_busy)
+	    if(msg_check(buffer1.mem,buffer1.tail,cmsg[0]))
 	      {
-		cmd_state = C_SETUP;
-		port1_state = P_FLUSH;
+	    	cmd_state = C_SETUP;
+	    	port1_state = P_FLUSH;
 	      }
-	  }
-	else if(msg_check(buffer1.mem,buffer1.tail,cmsg[1]))
-	  {
-	    if(!cmd_busy)
+	    else if(msg_check(buffer1.mem,buffer1.tail,cmsg[1]))
 	      {
-		cmd_state = C_CONNECT;
-		port1_state = P_FLUSH;
+	    	cmd_state = C_CONNECT;
+	    	port1_state = P_FLUSH;
 	      }
-	  }
-	else if(msg_check(buffer1.mem,buffer1.tail,cmsg[2]))
-	  {
-	    if(!cmd_busy)
+	    else if(msg_check(buffer1.mem,buffer1.tail,cmsg[2]))
 	      {
-		connect_init = 0;
-		cmd_state = C_CONNECT;
-		port1_state = P_FLUSH;
+	    	connect_init = 0;
+	    	cmd_state = C_CONNECT;
+	    	port1_state = P_FLUSH;
 	      }
-	  }
-	else
-	  {
-	    port1_state = P_TRANSMIT;
+	    else if(msg_check(buffer1.mem,buffer1.tail,cmsg[3]))
+	      {
+	    	cmd_state = C_SSID;
+	      }
+	    else if(msg_check(buffer1.mem,buffer1.tail,cmsg[4]))
+	      {
+	    	cmd_state = C_PASS;
+	      }
+	    else if(msg_check(buffer1.mem,buffer1.tail,cmsg[5]))
+	      {
+	    	cmd_state = C_URL;
+	      }
+	    else
+	      {
+		port1_state = P_TRANSMIT;
+	      }
 	  }
 	break;
       case(P_TRANSMIT):
-	while(buffer1.mem[buffer1.tail] != '\n')
-	  {
-	    while(Busy2USART());
-	    Write2USART(buffer1.mem[buffer1.tail++]);
-	  }
-	while(Busy2USART());
-	Write2USART(buffer1.mem[buffer1.tail++]);
+	do {
+	  while(Busy2USART());
+	  Write2USART(buffer1.mem[buffer1.tail]);
+	  /* send_char_ram(buffer1.mem[buffer1.tail],2); */
+	} while(buffer1.mem[buffer1.tail++] != '\n');
+	/* while(buffer1.mem[buffer1.tail] != '\n') */
+	/*   { */
+	/*     send_char(buffer1.mem[buffer1.tail++],2); */
+	/*   } */
+	/* while(Busy2USART()); */
+	/* Write2USART(buffer1.mem[buffer1.tail++]); */
 	port1_state = P_IDLE;
 	buffer1.flag--;
 
@@ -353,8 +506,11 @@ void main(void)
 	    {
 	      wifi_ok = 0;
 	      send_msg(wifi_cmds[5],2);
-	      send_msg(ssid,2);
-	      send_msg(pass,2);
+	      send_msg((const far rom int8_t *)"\"",2);
+	      send_msg_ram(ssid,2);	
+	      send_msg((const far rom int8_t *)"\",\"",2);
+	      send_msg_ram(pass,2);
+	      send_msg((const far rom int8_t *)"\"",2);
 	      send_msg(wifi_cmds[0],2);
 	      setup_state = SETUP_AT;
 	      cmd_state = C_IDLE;
@@ -399,7 +555,14 @@ void main(void)
 		    }
 		  else
 		    {
-		      send_msg(put_packet_length,2);
+		      if (strlen(key) == 5)
+			{
+			  send_msg(put_packet_length1,2);
+			}
+		      else if (strlen(key) == 6)
+			{
+			  send_msg(put_packet_length2,2);
+			}
 		    }		      
 		  send_msg(wifi_cmds[0],2);
 		  connect_state = CONNECT_CIPSEND_DATA;
@@ -445,25 +608,12 @@ void main(void)
 		    send_msg(put_content[1],2);
 		    send_msg_ram(time_string,2);
 		    send_msg(put_content[2],2);
-
-		    send_msg(put_content[0],1);
-		    send_msg(put_content[1],1);
-		    send_msg_ram(time_string,1);
-		    send_msg(put_content[2],1);
 		  }
-		    
 		  send_msg(wifi_cmds[0],2);
 		  send_msg(wifi_cmds[0],2);
 		  send_msg(wifi_cmds[0],2);
 		  send_msg(wifi_cmds[0],2);
-
-		  send_msg(wifi_cmds[0],1);
-		  send_msg(wifi_cmds[0],1);
-		  send_msg(wifi_cmds[0],1);
-		  send_msg(wifi_cmds[0],1);
 		  
-		  connect_init = 0;
-		  wifi_send_ready = 0;
 		  connect_state = CONNECT_EXIT;
 		}
 	      break;
@@ -473,6 +623,8 @@ void main(void)
 	      break;
 	    case(CONNECT_EXIT):
 	      cmd_busy = 0;
+	      connect_init = 0;
+	      wifi_send_ready = 0;
 	      connect_state = CONNECT_AT;
 	      cmd_state = C_IDLE;
 	      break;
@@ -480,6 +632,23 @@ void main(void)
 	      break;
 	    }
 	  }
+	break;
+      case(C_SSID):
+	copy_msg(buffer1.mem, buffer1.tail += 5, ssid);
+	cmd_state = C_IDLE;
+	port1_state = P_FLUSH;
+	break;
+      case(C_PASS):
+	copy_msg(buffer1.mem, buffer1.tail += 5, pass);
+	cmd_state = C_IDLE;
+	port1_state = P_FLUSH;
+	break;
+      case(C_URL):
+	send_msg(url,1);
+	send_msg_ram(key,1);
+	send_msg(wifi_cmds[0],1);
+	cmd_state = C_IDLE;
+	port1_state = P_FLUSH;
 	break;
       default:
 	break;
@@ -513,12 +682,7 @@ void main(void)
 	  {
 	    key_offset = buffer2.tail;
 	    key_offset += 35;
-
-	    key[0] = buffer2.mem[key_offset++];
-	    key[1] = buffer2.mem[key_offset++];
-	    key[2] = buffer2.mem[key_offset++];
-	    key[3] = buffer2.mem[key_offset++];
-	    key[4] = buffer2.mem[key_offset++];
+	    get_key(buffer2.mem, key, key_offset);
 	  }
 	buffer2.flag--;
 	port2_state = P_FLUSH;

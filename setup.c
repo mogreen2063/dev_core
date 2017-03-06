@@ -26,6 +26,8 @@ void setup()
     MOVWF	RPINR16, BANKED
     MOVLW	0X05
     MOVWF	RPOR11, BANKED
+    MOVLW       0X07
+    MOVWF       RPINR1, BANKED
     MOVLW	0X55
     MOVWF	EECON2, ACCESS
     MOVLW	0XAA
@@ -50,7 +52,7 @@ void setup()
   // setup portb
   LATB   = 0b00000000;
   ANCON1 = ANCON1 | 0x17;
-  TRISB  = 0b00000000;
+  TRISB  = 0b00010000;
 
   // setup portc
   LATC   = 0b01000000;
@@ -91,12 +93,18 @@ void setup()
   
   BAUDCON2bits.RXDTP = 0;
   
+  // setup timer0
+  T0CON = 0b00001000;
+  TMR0H = 0;
+  TMR0L = 0;
+
   // setup interrupts
   RCONbits.IPEN   = 0; //disable priority
   PIR1bits.RC1IF  = 0;
   PIE1bits.RC1IE  = 1;
   PIR3bits.RC2IF  = 0;
   PIE3bits.RC2IE  = 1;
+
   INTCONbits.PEIE = 1;
   INTCONbits.GIE  = 1;
 
