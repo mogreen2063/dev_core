@@ -1,8 +1,14 @@
 #include "stdint.h"
+#include "http.h"
 
 /* defines */
 #define BUFFER1_SIZE 256
 #define BUFFER2_SIZE 256
+
+typedef struct {
+  PortStates state;
+  Buffer_t * buffer;
+} Port_t;
 
 typedef enum {
   P_IDLE,
@@ -10,15 +16,6 @@ typedef enum {
   P_TRANSMIT,
   P_FLUSH
 } PortStates;
-
-typedef enum {
-  W_IDLE,
-  W_READY,
-  W_OK,
-  W_TRANSMIT,
-  W_CONNECT,
-  W_RECEIVE
-} WifiStates;
 
 typedef enum {
   C_IDLE,
@@ -29,6 +26,21 @@ typedef enum {
   C_PASS,
   C_URL
 } CmdStates;
+
+typedef enum {
+  W_IDLE,
+  W_CONNECTED,
+  W_OPEN
+} WifiStates;
+
+typedef struct {
+  WifiStates state;
+  uint8_t ok;
+  uint8_t mode;
+  int8_t * ssid;
+  int8_t * pass;
+  int8_t * url;
+} Wifi_t;
 
 typedef enum {
   SETUP_AT,
@@ -61,17 +73,20 @@ typedef struct {
   int8_t * mem;
 } Buffer_t;
 
-
 #pragma code
 void setup(void);
 void InterruptHandlerHigh(void);
-void sendstr();
-uint8_t buffer2_comp(uint8_t index, const far rom int8_t * msg);
-uint8_t msg_check(int8_t * mem, uint8_t index,
-		  const far rom int8_t * msg);
+void copy_msg(int8_t * mem, uint8_t index, far int8_t * msg);
+
 void send_msg(const far rom int8_t * msg, uint8_t dest);
 void send_msg_ram(far int8_t * msg, uint8_t dest);
 void send_char(const far rom int8_t * c, uint8_t dest);
 void send_char_ram(int8_t * c, uint8_t dest);
-void copy_msg(int8_t * mem, uint8_t index, far int8_t * msg);
+void hex2ascii(int8_t * ascii_string, uint8_t n);
+void hex2dec(int8_t * ascii_string, uint8_t n);
+uint8_t msg_check(int8_t * mem, uint8_t index,
+		  const far rom int8_t * msg);
+
+void handle_port1(Buffer_t * buffer1, PortStates * port1_state, CmdStates * cmd_state, Wifi_t * wifi);
+void handle_port2(Buffer_t * buffer2, PortStates * port2_state, Wifi_t * wifi, Http_t * http);
 void get_key(int8_t * mem, int8_t * key, uint8_t key_offset);

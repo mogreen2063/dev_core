@@ -8,4 +8,4 @@ typedef signed int int16_t;
 typedef unsigned long uint32_t;
 typedef signed long int32_t;
 
-#endif
+#endif	/* _STDINT_H */

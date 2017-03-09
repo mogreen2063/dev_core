@@ -13,7 +13,7 @@ void get_key(int8_t * mem, int8_t * key, uint8_t key_offset)
   *key = '\0';
 }
 
-void handle_port2(Buffer_t * buffer2, PortStates * port2_state, Wifi_t * wifi, int8_t * http_key)
+void handle_port2(Buffer_t * buffer2, PortStates * port2_state, Wifi_t * wifi, Http_t * http)
 {
   /* wifi module terminal output */
   if(buffer2->head != buffer2->echo)
@@ -40,7 +40,7 @@ void handle_port2(Buffer_t * buffer2, PortStates * port2_state, Wifi_t * wifi, i
       }
     else if(msg_check(buffer2->mem,buffer2->tail,wmsg[2]))
       {
-	get_key(buffer2->mem, http_key, buffer2->tail + 35);
+	get_key(buffer2->mem, http->key, buffer2->tail + 35);
       }
     buffer2->flag--;
     *port2_state = P_FLUSH;

@@ -1,12 +1,14 @@
 #include "setup.h"
 #include "wifi.h"
+#include "http.h"
+#include "cmd.h"
 
 #pragma idata
 SetupStates setup_state = SETUP_AT;
 ConnectStates connect_state = CONNECT_AT;
 
 #pragma udata
-void handle_cmd(Buffer_t * buffer1, PortStates * port1_state, CmdStates * cmd_state, Wifi_t * wifi)
+void handle_cmd(Buffer_t * buffer1, PortStates * port1_state, CmdStates * cmd_state, Wifi_t * wifi, Http_t * http)
 {
   switch(*cmd_state) {
   case(C_IDLE):
@@ -23,7 +25,7 @@ void handle_cmd(Buffer_t * buffer1, PortStates * port1_state, CmdStates * cmd_st
     case(SETUP_CWMODE):
       if(wifi->ok)
 	{
-	  wifi->state = 0;
+	  wifi->ok = 0;
 	  wifi_cwmode(WIFI_CWMODE);
 	  setup_state = SETUP_RST;
 	}
@@ -31,7 +33,7 @@ void handle_cmd(Buffer_t * buffer1, PortStates * port1_state, CmdStates * cmd_st
     case(SETUP_RST):
       if(wifi->ok)
 	{
-	  wifi->state = 0;
+	  wifi->ok = 0;
 	  wifi_rst();
 	  setup_state = SETUP_CWDHCP;
 	}
@@ -79,14 +81,16 @@ void handle_cmd(Buffer_t * buffer1, PortStates * port1_state, CmdStates * cmd_st
 	  if(wifi->ok)
 	    {
 	      wifi->ok = 0;
-	      wifi_cipsend(http_get_packet_length(wifi->mode));
+	      http->request = wifi->mode;
+	      http_get_packet_length(http);
+	      wifi_cipsend(http->packet_length);
 	      connect_state = CONNECT_CIPSEND_DATA;
 	    }
 	  break;
 	case(CONNECT_CIPSEND_DATA):
 	  if(wifi->ok)
 	    {
-	      http_send_packet(wifi->mode);
+	      http_send_packet(http);
 	      connect_state = CONNECT_EXIT;
 	    }
 	  break;
@@ -115,7 +119,7 @@ void handle_cmd(Buffer_t * buffer1, PortStates * port1_state, CmdStates * cmd_st
     break;
   case(C_URL):
     send_msg_ram(wifi->url,1);
-    send_msg_ram(wifi->http_key,1);
+    send_msg_ram(http->key,1);
     send_msg((const far rom int8_t *)"\r\n",1);
     *cmd_state = C_IDLE;
     *port1_state = P_FLUSH;
