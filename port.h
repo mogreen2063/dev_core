@@ -1,11 +1,10 @@
 #ifndef _PORT_H
 #define _PORT_H
 
-#include "stdint.h"
+#include <xc.h>
+#include <stdint.h>
 #include "wifi.h"
 
-#define BUFFER1_SIZE 256
-#define BUFFER2_SIZE 256
 
 typedef enum {
   P_IDLE,
@@ -25,25 +24,26 @@ typedef enum {
 } CmdStates;
 
 typedef struct {
+  PortStates p_state;
+  CmdStates  c_state;
+} Port_t;
+
+typedef struct {
+  volatile uint8_t * mem;
   volatile uint8_t flag;
   volatile uint8_t head;
   uint8_t tail;
   uint8_t echo;
-  int8_t * mem;
 } Buffer_t;
 
-typedef struct {
-  PortStates state;
-  CmdStates cmd_state;
-  Buffer_t * buffer;
-} Port_t;
 
 typedef enum {
   SETUP_AT,
   SETUP_CWMODE,
   SETUP_RST,
   SETUP_CWDHCP,
-  SETUP_CWJAP
+  SETUP_CWJAP,
+  SETUP_EXIT
 } SetupStates;
 
 typedef enum {
@@ -55,19 +55,24 @@ typedef enum {
   CONNECT_EXIT
 } ConnectStates;
 
-void send_msg(const far rom int8_t * msg, uint8_t dest);
-void send_msg_ram(far int8_t * msg, uint8_t dest);
-void send_char(const far rom int8_t * c, uint8_t dest);
-void send_char_ram(int8_t * c, uint8_t dest);
-void hex2ascii(int8_t * ascii_string, uint8_t n);
-void hex2dec(int8_t * ascii_string, uint8_t n);
+void send_msg(const uint8_t * msg, uint8_t dest);
+void send_msg_ram(uint8_t * msg, uint8_t dest);
+void send_char(const uint8_t * c, uint8_t dest);
 
-void copy_msg(int8_t * mem, uint8_t index, far int8_t * msg);
-uint8_t msg_check(int8_t * mem, uint8_t index,
-		  const far rom int8_t * msg);
-void get_key(int8_t * mem, int8_t * key, uint8_t key_offset);
+void send_char_ram(volatile uint8_t * c, uint8_t dest);
+void hex2ascii(uint8_t * ascii_string, uint8_t n);
+void hex2dec(uint8_t * ascii_string, uint8_t n);
+void hex2dec16(uint8_t * ascii_string, uint16_t n);
 
-void handle_port1(Port_t * port, Wifi_t * wifi);
-void handle_port2(Port_t * port, Wifi_t * wifi);
+void copy_msg(volatile uint8_t * mem, uint8_t index, uint8_t * msg, const uint8_t * bk);
+/* void copy_msg(volatile uint8_t * mem, uint8_t index, uint8_t * msg); */
+uint8_t msg_check(volatile uint8_t * mem, uint8_t index, const uint8_t * msg);
+void get_key(volatile uint8_t * mem, uint8_t * key, uint8_t key_offset);
+
+void handle_port1(Port_t * port, Buffer_t * buffer, Wifi_t * wifi, Http_t * http);
+void handle_port2(Port_t * port, Buffer_t * buffer, Wifi_t * wifi, Http_t * http);
+void handle_cmd(Port_t * port, Buffer_t * buffer, Wifi_t * wifi, Http_t * http);
+uint8_t handle_cmd_setup(Port_t * port, Wifi_t * wifi);
+uint8_t handle_cmd_connect(Port_t * port, Wifi_t * wifi, Http_t * http, ConnectStates * connect_state);
 
 #endif	/* _PORT_H */

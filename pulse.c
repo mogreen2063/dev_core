@@ -1,75 +1,72 @@
-      /* send_msg_ram(http_content_length,1); */
-      /* send_msg(crlf,1); */
+#include <xc.h>
+#include <stdint.h>
+#include "pulse.h"
 
-      /* http_packet_length = http_get_packet_length(0); */
-      /* hex2dec(http_content_length,http_packet_length); */
-      /* send_msg_ram(http_content_length,1); */
-      /* send_msg(crlf,1); */
+#define _XTAL_FREQ 24000000
+
+void pulse_init(Pulse_t * pulse)
+{
+  pulse->time = 0;
+  pulse->ready = 0;
+  pulse->flag = 0;
+  pulse->timeout = 0;
+  pulse->state = PULSE_INIT;
+}
+
+void handle_pulse(Pulse_t * pulse)
+{
+  switch(pulse->state) {
+  case(PULSE_IDLE):
+    break;
+  case(PULSE_INIT):
+    if(!PORTBbits.RB4) {
+      /* reset timer0 */
+      T0CONbits.TMR0ON = 0;
+      TMR0H = 0;
+      TMR0L = 0;
+
+      /* setup edge trigger */
+      INTCON3bits.INT1IF = 0;
+      INTCON2bits.INTEDG1 = 1;
+      INTCON3bits.INT1IE = 1;
+
+      /* pulse */
+      LATCbits.LATC2 = 1;
+      __delay_us(10);
+      LATCbits.LATC2 = 0;
+
+      /* set time for timeout */
+      pulse->timeout = 0;
+
+      /* T1CONbits.TMR1ON = 0; */
+      /* TMR1H = 0x00; */
+      /* TMR1L = 0x00; */
+      /* PIR1bits.TMR1IF = 0; */
+      /* PIE1bits.TMR1IE = 1; */
+      /* T1CONbits.TMR1ON = 1; */
+	
+      pulse->state = PULSE_ON;
+    }
+    break;
+  case(PULSE_ON):
+    /* if(pulse->timeout) */
+    /*   { */
+    /* 	pulse->state = PULSE_IDLE; */
+    /*   } */
+    if(pulse->flag) {
+      pulse->time = TMR0L;
+      pulse->time = pulse->time | (TMR0H << 8);
+      /* pulse->time = pulse->time << 8; */
+      /* pulse->time |= TMR0L; */
       
-      /* while(1); */
+      pulse->flag = 0;
+      pulse->ready = 1;
       
-      /* implement WDT */
-      /* switch(pulse_state) { */
-      /* case(PULSE_INIT): */
-      /* 	if(!PORTBbits.RB0) { */
-      /* 	  INTCON3bits.INT1IF = 0; */
-      /* 	  INTCON2bits.INTEDG1 = 1; */
-      /* 	  INTCON3bits.INT1IE = 1; */
-      /* 	  time_flag = 0; */
-      /* 	  time_sum = 0; */
-      /* 	  pulse_count = 16; */
-      /* 	  pulse_state = PULSE_ON; */
-      /* 	  TMR0H = 0;		/\* reset timer0 *\/ */
-      /* 	  TMR0L = 0; */
-      /* 	  LATCbits.LATC2 = 1;	 /\* start pulse *\/ */
-      /* 	  Delay10TCYx(6); */
-      /* 	  LATCbits.LATC2 = 0; */
-      /* 	} */
-      /* 	break; */
-      /* case(PULSE_ON): */
-      /* 	if(pulse_count) */
-      /* 	  { */
-      /* 	    if(time_flag) { */
-      /* 	      pulse_count--; */
-      /* 	      time = TMR0L;		/\* read timer *\/ */
-      /* 	      time = TMR0H; */
-      /* 	      time = time << 8; */
-      /* 	      time |= TMR0L; */
-
-      /* 	      get_time(time_string); */
-      /* 	      send_msg_ram(time_string,1); */
-      /* 	      send_msg(wifi_cmds[0],1); */
-
-      /* 	      time_sum = time_sum + ((uint32_t)time); */
-      /* 	      time_flag = 0; */
-      /* 	      TMR0H = 0;		/\* reset timer0 *\/ */
-      /* 	      TMR0L = 0; */
-      /* 	      LATCbits.LATC2 = 1;	 /\* start pulse *\/ */
-      /* 	      Delay10TCYx(6); */
-      /* 	      LATCbits.LATC2 = 0; */
-      /* 	      Delay10KTCYx(60); */
-      /* 	    } */
-      /* 	  } */
-      /* 	else */
-      /* 	  { */
-      /* 	    time_sum = time_sum >> 4; */
-      /* 	    time = time_sum; */
-      /* 	    get_time(time_string); */
-      /* 	    send_msg(wifi_cmds[0],1); */
-      /* 	    send_msg_ram(time_string,1); */
-      /* 	    send_msg(wifi_cmds[0],1); */
-      /* 	    pulse_state = PULSE_OFF; */
-      /* 	  } */
-      /* 	break; */
-      /* case(PULSE_OFF): */
-      /* 	/\* enter sleep *\/ */
-      /* 	Delay10KTCYx(255); */
-      /* 	pulse_state = PULSE_INIT; */
-      /* 	break; */
-      /* default: */
-      /* 	break; */
-      /* } */
-
-      /* time++; */
-      /* get_time(time_string); */
+      pulse->state = PULSE_IDLE;
+    }
+    break;
+  default:
+    break;
+  }
+}
       

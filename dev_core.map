@@ -1,0 +1,1935 @@
+Microchip MPLAB XC8 Compiler V1.41 ()
+
+Linker command line:
+
+--edf=C:\Program Files (x86)\Microchip\xc8\v1.41\dat\en_msgs.txt -cs \
+  -h+dev_core.sym --cmf=dev_core.cmf -z -Q18F24J50 \
+  -oC:\Users\spelu\AppData\Local\Temp\s1ks.2 -Mdev_core.map -E1 -ver=XC8 \
+  -ASTACK=0400h-0ebfh -pstack=STACK -ACODE=00h-03FF7h -ACONST=00h-03FF7h \
+  -ASMALLCONST=0F00h-0FFFhx48,03F00h-03FF7h -AMEDIUMCONST=0F00h-03FF7h \
+  -ACOMRAM=01h-05Fh -AABS1=00h-0EBFh -ABIGRAM=01h-0EBFh \
+  -ARAM=060h-0FFh,0100h-01FFhx13,0E00h-0EBFh -ABANK0=060h-0FFh \
+  -ABANK1=0100h-01FFh -ABANK2=0200h-02FFh -ABANK3=0300h-03FFh \
+  -ABANK4=0400h-04FFh -ABANK5=0500h-05FFh -ABANK6=0600h-06FFh \
+  -ABANK7=0700h-07FFh -ABANK8=0800h-08FFh -ABANK9=0900h-09FFh \
+  -ABANK10=0A00h-0AFFh -ABANK11=0B00h-0BFFh -ABANK12=0C00h-0CFFh \
+  -ABANK13=0D00h-0DFFh -ABANK14=0E00h-0EBFh \
+  -ASFR=0EC0h-0EFFh,0F00h-0F5Fh,0F60h-0FFFh \
+  -preset_vec=00h,intcode=08h,intcodelo,powerup,init -pramtop=0F00h \
+  -psmallconst=SMALLCONST -pmediumconst=MEDIUMCONST -pconst=CONST \
+  -AFARRAM=00h-00h -ACONFIG=03FF8h-03FFFh -pconfig=CONFIG \
+  -pjflash_buffer=03800h \
+  -prdata=COMRAM,nvrram=COMRAM,nvbit=COMRAM,rbss=COMRAM,rbit=COMRAM \
+  -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
+  -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
+  -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
+  C:\Users\spelu\AppData\Local\Temp\s1ks.obj dev_core.obj 
+
+Object code version is 3.11
+
+Machine type is 18F24J50
+
+Call graph: (short form)
+
+
+
+
+                Name                               Link     Load   Length Selector   Space Scale
+C:\Users\spelu\AppData\Local\Temp\s1ks.obj
+                init                                134      134        4        4       0
+                reset_vec                             0        0        4        0       0
+                config                             3FF8     3FF8        6     3FF8       0
+dev_core.obj    intcode                               8        8      12C        4       0
+                temp                                 4E       4E        1        1       1
+                mediumconst                        3CEC     3CEC      30C     1E76       0
+                text29                             1A06     1A06       56        4       0
+                text28                             1C26     1C26       34        4       0
+                text27                             17C8     17C8       A0        4       0
+                text26                             1718     1718       B0        4       0
+                text25                             1B00     1B00       52        4       0
+                text24                              138      138      49A        4       0
+                text23                             194E     194E       62        4       0
+                text22                             19B0     19B0       56        4       0
+                text21                              BB0      BB0      23E        4       0
+                text20                             1C8C     1C8C       32        4       0
+                text19                             1AAE     1AAE       52        4       0
+                text18                             1D12     1D12       12        4       0
+                text17                             1D00     1D00       12        4       0
+                text16                             100A     100A      18A        4       0
+                text15                             1868     1868       74        4       0
+                text14                             18DC     18DC       72        4       0
+                text13                             1BE2     1BE2       44        4       0
+                text12                             1CEE     1CEE       12        4       0
+                text11                             12F2     12F2      150        4       0
+                text10                              DEE      DEE      21C        4       0
+                text9                              1B52     1B52       4A        4       0
+                text8                              1C5A     1C5A       32        4       0
+                text7                               5D2      5D2      396        4       0
+                text6                               968      968      248        4       0
+                text5                              154A     154A       EC        4       0
+                text4                              1CBE     1CBE       30        4       0
+                text3                              1442     1442      108        4       0
+                text2                              1A5C     1A5C       52        4       0
+                text1                              1636     1636       E2        4       0
+                text0                              1194     1194      15E        4       0
+                cstackCOMRAM                          1        1       2B        1       1
+                cstackBANK0                          96       96       10       60       1
+                dataBANK0                            A6       A6        D       60       1
+                bssBANK0                             60       60       36       60       1
+                bssCOMRAM                            2C       2C       22        1       1
+                cinit                              1B9C     1B9C       46        4       0
+                idataBANK0                         1D24     1D24        D        4       0
+
+TOTAL           Name                               Link     Load   Length     Space
+        CLASS   STACK          
+
+        CLASS   CODE           
+                intcode                               8        8      12C         0
+                init                                134      134        4         0
+                reset_vec                             0        0        4         0
+                text29                             1A06     1A06       56         0
+                text28                             1C26     1C26       34         0
+                text27                             17C8     17C8       A0         0
+                text26                             1718     1718       B0         0
+                text25                             1B00     1B00       52         0
+                text24                              138      138      49A         0
+                text23                             194E     194E       62         0
+                text22                             19B0     19B0       56         0
+                text21                              BB0      BB0      23E         0
+                text20                             1C8C     1C8C       32         0
+                text19                             1AAE     1AAE       52         0
+                text18                             1D12     1D12       12         0
+                text17                             1D00     1D00       12         0
+                text16                             100A     100A      18A         0
+                text15                             1868     1868       74         0
+                text14                             18DC     18DC       72         0
+                text13                             1BE2     1BE2       44         0
+                text12                             1CEE     1CEE       12         0
+                text11                             12F2     12F2      150         0
+                text10                              DEE      DEE      21C         0
+                text9                              1B52     1B52       4A         0
+                text8                              1C5A     1C5A       32         0
+                text7                               5D2      5D2      396         0
+                text6                               968      968      248         0
+                text5                              154A     154A       EC         0
+                text4                              1CBE     1CBE       30         0
+                text3                              1442     1442      108         0
+                text2                              1A5C     1A5C       52         0
+                text1                              1636     1636       E2         0
+                text0                              1194     1194      15E         0
+                cinit                              1B9C     1B9C       46         0
+                idataBANK0                         1D24     1D24        D         0
+
+        CLASS   CONST          
+
+        CLASS   SMALLCONST     
+
+        CLASS   MEDIUMCONST    
+                mediumconst                        3CEC     3CEC      30C         0
+
+        CLASS   COMRAM         
+                temp                                 4E       4E        1         1
+                cstackCOMRAM                          1        1       2B         1
+                bssCOMRAM                            2C       2C       22         1
+
+        CLASS   ABS1           
+                abs_s1                              100      100      300         1
+
+        CLASS   BIGRAM         
+
+        CLASS   RAM            
+
+        CLASS   BANK0          
+                cstackBANK0                          96       96       10         1
+                dataBANK0                            A6       A6        D         1
+                bssBANK0                             60       60       36         1
+
+        CLASS   BANK1          
+
+        CLASS   BANK2          
+
+        CLASS   BANK3          
+
+        CLASS   BANK4          
+
+        CLASS   BANK5          
+
+        CLASS   BANK6          
+
+        CLASS   BANK7          
+
+        CLASS   BANK8          
+
+        CLASS   BANK9          
+
+        CLASS   BANK10         
+
+        CLASS   BANK11         
+
+        CLASS   BANK12         
+
+        CLASS   BANK13         
+
+        CLASS   BANK14         
+
+        CLASS   SFR            
+
+        CLASS   FARRAM         
+
+        CLASS   CONFIG         
+                config                             3FF8     3FF8        6         0
+
+        CLASS   IDLOC          
+
+
+
+SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class
+
+                reset_vec                      000000  000004  000004         0       0  CODE    
+                cstackCOMRAM                   000001  00004E  00004F         1       1  COMRAM  
+                intcode                        000008  001D29  001D31         4       0  CODE    
+                bssBANK0                       000060  000053  0000B3        60       1  BANK0   
+                mediumconst                    003CEC  00030C  003FF8      1E76       0  MEDIUMCO
+                config                         003FF8  000006  003FFE      3FF8       0  CONFIG  
+
+
+UNUSED ADDRESS RANGES
+
+        Name                Unused          Largest block    Delta
+        BANK0            00B3-00FF             4D
+        BANK10           0A00-0AFF            100
+        BANK11           0B00-0BFF            100
+        BANK12           0C00-0CFF            100
+        BANK13           0D00-0DFF            100
+        BANK14           0E00-0EBF             C0
+        BANK4            0400-04FF            100
+        BANK5            0500-05FF            100
+        BANK6            0600-06FF            100
+        BANK7            0700-07FF            100
+        BANK8            0800-08FF            100
+        BANK9            0900-09FF            100
+        BIGRAM           004F-005F             11
+                         00B3-00FF             4D
+                         0400-0EBF            AC0
+        CODE             0004-0007              4
+                         1D31-3CEB           1FBB
+        COMRAM           004F-005F             11
+        CONFIG           3FFE-3FFF              2
+        CONST            0004-0007              4
+                         1D31-3CEB           1FBB
+        MEDIUMCONST      1D31-3CEB           1FBB
+        RAM              00B3-00FF             4D
+                         0400-0EBF            100
+        SFR              0EC0-0FFF             60
+        SMALLCONST       1D31-3CEB            100
+        STACK            0400-0EBF            AC0
+
+                                  Symbol Table
+
+?_strlen                         cstackCOMRAM  0011
+_ADCON0                          (abs)         0FC2
+_ADCON1                          (abs)         0FC1
+_ANCON0                          (abs)         0F48
+_ANCON1                          (abs)         0F49
+_ANCON1bits                      (abs)         0F49
+_BAUDCON1                        (abs)         0F7E
+_BAUDCON2                        (abs)         0F7C
+_CM1CON                          (abs)         0FD2
+_CVRCON                          (abs)         0F53
+_INTCON                          (abs)         0FF2
+_INTCON2bits                     (abs)         0FF1
+_INTCON3bits                     (abs)         0FF0
+_INTCONbits                      (abs)         0FF2
+_IPR1                            (abs)         0F9F
+_IPR2                            (abs)         0FA2
+_IPR3                            (abs)         0FA5
+_LATA                            (abs)         0F89
+_LATB                            (abs)         0F8A
+_LATC                            (abs)         0F8B
+_LATCbits                        (abs)         0F8B
+_OSCCON                          (abs)         0FD3
+_OSCTUNE                         (abs)         0F9B
+_PIE1bits                        (abs)         0F9D
+_PIE3bits                        (abs)         0FA3
+_PIR1bits                        (abs)         0F9E
+_PIR3bits                        (abs)         0FA4
+_PORTBbits                       (abs)         0F81
+_PPSCONbits                      (abs)         0EFF
+_RCONbits                        (abs)         0FD0
+_RCREG1                          (abs)         0FAF
+_RCREG2                          (abs)         0FAA
+_RCSTA1                          (abs)         0FAC
+_RCSTA2                          (abs)         0F9C
+_SPBRG1                          (abs)         0FB0
+_SPBRG2                          (abs)         0FAB
+_SPBRGH1                         (abs)         0F7F
+_SPBRGH2                         (abs)         0F7D
+_T0CON                           (abs)         0FD5
+_T0CONbits                       (abs)         0FD5
+_T1CON                           (abs)         0FCD
+_T1CONbits                       (abs)         0FCD
+_T1GCON                          (abs)         0F9A
+_TCLKCON                         (abs)         0F52
+_TMR0H                           (abs)         0FD7
+_TMR0L                           (abs)         0FD6
+_TMR1H                           (abs)         0FCF
+_TMR1L                           (abs)         0FCE
+_TRISA                           (abs)         0F92
+_TRISB                           (abs)         0F93
+_TRISC                           (abs)         0F94
+_TRISCbits                       (abs)         0F94
+_TXREG1                          (abs)         0FAE
+_TXREG2                          (abs)         0FA9
+_TXSTA1                          (abs)         0FAD
+_TXSTA1bits                      (abs)         0FAD
+_TXSTA2                          (abs)         0FA8
+_TXSTA2bits                      (abs)         0FA8
+_WDTCON                          (abs)         0FC0
+__CFG_CP0$OFF                    (abs)         0000
+__CFG_CPUDIV$OSC2_PLL2           (abs)         0000
+__CFG_DEBUG$OFF                  (abs)         0000
+__CFG_DSWDTEN$OFF                (abs)         0000
+__CFG_IOL1WAY$OFF                (abs)         0000
+__CFG_OSC$INTOSCPLLO             (abs)         0000
+__CFG_PLLDIV$2                   (abs)         0000
+__CFG_T1DIG$OFF                  (abs)         0000
+__CFG_WDTEN$ON                   (abs)         0000
+__CFG_WDTPS$1024                 (abs)         0000
+__CFG_XINST$OFF                  (abs)         0000
+__HRAM                           (abs)         0000
+__Habs1                          abs1          0000
+__Hbank0                         bank0         0000
+__Hbank1                         bank1         0000
+__Hbank10                        bank10        0000
+__Hbank11                        bank11        0000
+__Hbank12                        bank12        0000
+__Hbank13                        bank13        0000
+__Hbank14                        bank14        0000
+__Hbank2                         bank2         0000
+__Hbank3                         bank3         0000
+__Hbank4                         bank4         0000
+__Hbank5                         bank5         0000
+__Hbank6                         bank6         0000
+__Hbank7                         bank7         0000
+__Hbank8                         bank8         0000
+__Hbank9                         bank9         0000
+__Hbigbss                        bigbss        0000
+__Hbigdata                       bigdata       0000
+__Hbigram                        bigram        0000
+__Hbss                           bss           0000
+__HbssBANK0                      bssBANK0      0000
+__HbssCOMRAM                     bssCOMRAM     0000
+__Hcinit                         cinit         0000
+__Hclrtext                       clrtext       0000
+__Hcomram                        comram        0000
+__Hconfig                        config        3FFE
+__Hconst                         const         0000
+__HcstackBANK0                   cstackBANK0   0000
+__HcstackCOMRAM                  cstackCOMRAM  0000
+__Hdata                          data          0000
+__HdataBANK0                     dataBANK0     0000
+__Hfarbss                        farbss        0000
+__Hfardata                       fardata       0000
+__Hibigdata                      ibigdata      0000
+__Hidata                         idata         0000
+__HidataBANK0                    idataBANK0    0000
+__Hidloc                         idloc         0000
+__Hifardata                      ifardata      0000
+__Hinit                          init          0138
+__Hintcode                       intcode       0134
+__Hintcode_body                  intcode_body  0000
+__Hintcodelo                     intcodelo     0134
+__Hintentry                      intentry      0000
+__Hintret                        intret        0000
+__Hintsave_regs                  intsave_regs  0000
+__Hirdata                        irdata        0000
+__Hjflash_buffer                 jflash_buffer 3800
+__Hmediumconst                   mediumconst   3FF8
+__HnvFARRAM                      nvFARRAM      0000
+__Hnvbit                         nvbit         0000
+__Hnvrram                        nvrram        0000
+__Hparam                         rparam        0000
+__Hpowerup                       powerup       0134
+__Hram                           ram           0000
+__Hramtop                        ramtop        0F00
+__Hrbit                          rbit          0000
+__Hrbss                          rbss          0000
+__Hrdata                         rdata         0000
+__Hreset_vec                     reset_vec     0004
+__Hrparam                        rparam        0000
+__Hsfr                           sfr           0000
+__Hsmallconst                    smallconst    0000
+__Hspace_0                       (abs)         3FFE
+__Hspace_1                       (abs)         00B3
+__Hspace_2                       (abs)         0000
+__Hstack                         stack         0000
+__Hstruct                        struct        0000
+__Htemp                          temp          004F
+__Htext                          text          0000
+__Htext0                         text0         0000
+__Htext1                         text1         0000
+__Htext10                        text10        0000
+__Htext11                        text11        0000
+__Htext12                        text12        0000
+__Htext13                        text13        0000
+__Htext14                        text14        0000
+__Htext15                        text15        0000
+__Htext16                        text16        0000
+__Htext17                        text17        0000
+__Htext18                        text18        0000
+__Htext19                        text19        0000
+__Htext2                         text2         0000
+__Htext20                        text20        0000
+__Htext21                        text21        0000
+__Htext22                        text22        0000
+__Htext23                        text23        0000
+__Htext24                        text24        0000
+__Htext25                        text25        0000
+__Htext26                        text26        0000
+__Htext27                        text27        0000
+__Htext28                        text28        0000
+__Htext29                        text29        0000
+__Htext3                         text3         0000
+__Htext4                         text4         0000
+__Htext5                         text5         0000
+__Htext6                         text6         0000
+__Htext7                         text7         0000
+__Htext8                         text8         0000
+__Htext9                         text9         0000
+__LRAM                           (abs)         0001
+__Labs1                          abs1          0000
+__Lbank0                         bank0         0000
+__Lbank1                         bank1         0000
+__Lbank10                        bank10        0000
+__Lbank11                        bank11        0000
+__Lbank12                        bank12        0000
+__Lbank13                        bank13        0000
+__Lbank14                        bank14        0000
+__Lbank2                         bank2         0000
+__Lbank3                         bank3         0000
+__Lbank4                         bank4         0000
+__Lbank5                         bank5         0000
+__Lbank6                         bank6         0000
+__Lbank7                         bank7         0000
+__Lbank8                         bank8         0000
+__Lbank9                         bank9         0000
+__Lbigbss                        bigbss        0000
+__Lbigdata                       bigdata       0000
+__Lbigram                        bigram        0000
+__Lbss                           bss           0000
+__LbssBANK0                      bssBANK0      0000
+__LbssCOMRAM                     bssCOMRAM     0000
+__Lcinit                         cinit         0000
+__Lclrtext                       clrtext       0000
+__Lcomram                        comram        0000
+__Lconfig                        config        3FF8
+__Lconst                         const         0000
+__LcstackBANK0                   cstackBANK0   0000
+__LcstackCOMRAM                  cstackCOMRAM  0000
+__Ldata                          data          0000
+__LdataBANK0                     dataBANK0     0000
+__Lfarbss                        farbss        0000
+__Lfardata                       fardata       0000
+__Libigdata                      ibigdata      0000
+__Lidata                         idata         0000
+__LidataBANK0                    idataBANK0    0000
+__Lidloc                         idloc         0000
+__Lifardata                      ifardata      0000
+__Linit                          init          0134
+__Lintcode                       intcode       0008
+__Lintcode_body                  intcode_body  0000
+__Lintcodelo                     intcodelo     0134
+__Lintentry                      intentry      0000
+__Lintret                        intret        0000
+__Lintsave_regs                  intsave_regs  0000
+__Lirdata                        irdata        0000
+__Ljflash_buffer                 jflash_buffer 3800
+__Lmediumconst                   mediumconst   3CEC
+__LnvFARRAM                      nvFARRAM      0000
+__Lnvbit                         nvbit         0000
+__Lnvrram                        nvrram        0000
+__Lparam                         rparam        0000
+__Lpowerup                       powerup       0134
+__Lram                           ram           0000
+__Lramtop                        ramtop        0F00
+__Lrbit                          rbit          0000
+__Lrbss                          rbss          0000
+__Lrdata                         rdata         0000
+__Lreset_vec                     reset_vec     0000
+__Lrparam                        rparam        0000
+__Lsfr                           sfr           0000
+__Lsmallconst                    smallconst    0000
+__Lspace_0                       (abs)         0000
+__Lspace_1                       (abs)         0000
+__Lspace_2                       (abs)         0000
+__Lstack                         stack         0000
+__Lstruct                        struct        0000
+__Ltemp                          temp          004E
+__Ltext                          text          0000
+__Ltext0                         text0         0000
+__Ltext1                         text1         0000
+__Ltext10                        text10        0000
+__Ltext11                        text11        0000
+__Ltext12                        text12        0000
+__Ltext13                        text13        0000
+__Ltext14                        text14        0000
+__Ltext15                        text15        0000
+__Ltext16                        text16        0000
+__Ltext17                        text17        0000
+__Ltext18                        text18        0000
+__Ltext19                        text19        0000
+__Ltext2                         text2         0000
+__Ltext20                        text20        0000
+__Ltext21                        text21        0000
+__Ltext22                        text22        0000
+__Ltext23                        text23        0000
+__Ltext24                        text24        0000
+__Ltext25                        text25        0000
+__Ltext26                        text26        0000
+__Ltext27                        text27        0000
+__Ltext28                        text28        0000
+__Ltext29                        text29        0000
+__Ltext3                         text3         0000
+__Ltext4                         text4         0000
+__Ltext5                         text5         0000
+__Ltext6                         text6         0000
+__Ltext7                         text7         0000
+__Ltext8                         text8         0000
+__Ltext9                         text9         0000
+__S0                             (abs)         3FFE
+__S1                             (abs)         00B3
+__S2                             (abs)         0000
+___inthi_sp                      stack         0000
+___intlo_sp                      stack         0000
+___param_bank                    (abs)         0000
+___rparam_used                   (abs)         0001
+___sp                            stack         0000
+__accesstop                      (abs)         0060
+__activetblptr                   (abs)         0002
+__end_of__initialization         cinit         1BD4
+__end_of_cmsg                    mediumconst   3F08
+__end_of_connection_mode         mediumconst   3FAD
+__end_of_copy_msg                text29        1A5C
+__end_of_handle_cmd              text10        100A
+__end_of_handle_cmd_connect      text16        1194
+__end_of_handle_cmd_setup        text11        1442
+__end_of_handle_port1            text7         0968
+__end_of_handle_port2            text6         0BB0
+__end_of_handle_pulse            text5         1636
+__end_of_hex2ascii               text28        1C5A
+__end_of_hex2dec                 text27        1868
+__end_of_hex2dec16               text26        17C8
+__end_of_http_body               mediumconst   3F9C
+__end_of_http_body_strings       mediumconst   3F4E
+__end_of_http_calc               text24        05D2
+__end_of_http_connections        mediumconst   3F3A
+__end_of_http_content_types      mediumconst   3F83
+__end_of_http_crlf               mediumconst   3FB6
+__end_of_http_headers            mediumconst   3ED8
+__end_of_http_hosts              mediumconst   3F92
+__end_of_http_protocol           mediumconst   3FA6
+__end_of_http_requests           mediumconst   3F60
+__end_of_http_send_packet        text21        0DEE
+__end_of_http_urls               mediumconst   3FB3
+__end_of_init_var                text3         154A
+__end_of_ip                      mediumconst   3F72
+__end_of_isr                     intcode       0134
+__end_of_main                    text0         12F2
+__end_of_msg_check               text9         1B9C
+__end_of_port                    mediumconst   3FB9
+__end_of_pulse_init              text2         1AAE
+__end_of_send_char_ram           text8         1C8C
+__end_of_send_msg                text23        19B0
+__end_of_send_msg_ram            text22        1A06
+__end_of_setup                   text1         1718
+__end_of_strcpy                  text4         1CEE
+__end_of_strlen                  text25        1B52
+__end_of_url                     mediumconst   3F24
+__end_of_wifi_cipsend            text20        1CBE
+__end_of_wifi_cipstart           text19        1B00
+__end_of_wifi_close              text18        1D24
+__end_of_wifi_cmds               mediumconst   3DE0
+__end_of_wifi_cwdhcp             text15        18DC
+__end_of_wifi_cwjap              text14        194E
+__end_of_wifi_cwmode             text13        1C26
+__end_of_wifi_rst                text12        1D00
+__end_of_wifi_status             text17        1D12
+__end_of_wmsg                    mediumconst   3E94
+__initialization                 cinit         1B9C
+__mediumconst                    mediumconst   3CEC
+__pbssBANK0                      bssBANK0      0060
+__pbssCOMRAM                     bssCOMRAM     002C
+__pcinit                         cinit         1B9C
+__pcstackBANK0                   cstackBANK0   0096
+__pcstackCOMRAM                  cstackCOMRAM  0001
+__pdataBANK0                     dataBANK0     00A6
+__pidataBANK0                    idataBANK0    1D24
+__pintcode                       intcode       0008
+__pmediumconst                   mediumconst   3CEC
+__ptext0                         text0         1194
+__ptext1                         text1         1636
+__ptext10                        text10        0DEE
+__ptext11                        text11        12F2
+__ptext12                        text12        1CEE
+__ptext13                        text13        1BE2
+__ptext14                        text14        18DC
+__ptext15                        text15        1868
+__ptext16                        text16        100A
+__ptext17                        text17        1D00
+__ptext18                        text18        1D12
+__ptext19                        text19        1AAE
+__ptext2                         text2         1A5C
+__ptext20                        text20        1C8C
+__ptext21                        text21        0BB0
+__ptext22                        text22        19B0
+__ptext23                        text23        194E
+__ptext24                        text24        0138
+__ptext25                        text25        1B00
+__ptext26                        text26        1718
+__ptext27                        text27        17C8
+__ptext28                        text28        1C26
+__ptext29                        text29        1A06
+__ptext3                         text3         1442
+__ptext4                         text4         1CBE
+__ptext5                         text5         154A
+__ptext6                         text6         0968
+__ptext7                         text7         05D2
+__ptext8                         text8         1C5A
+__ptext9                         text9         1B52
+__ramtop                         ramtop        0F00
+__size_of_copy_msg               (abs)         0000
+__size_of_handle_cmd             (abs)         0000
+__size_of_handle_cmd_connect     (abs)         0000
+__size_of_handle_cmd_setup       (abs)         0000
+__size_of_handle_port1           (abs)         0000
+__size_of_handle_port2           (abs)         0000
+__size_of_handle_pulse           (abs)         0000
+__size_of_hex2ascii              (abs)         0000
+__size_of_hex2dec                (abs)         0000
+__size_of_hex2dec16              (abs)         0000
+__size_of_http_calc              (abs)         0000
+__size_of_http_send_packet       (abs)         0000
+__size_of_init_var               (abs)         0000
+__size_of_isr                    (abs)         0000
+__size_of_main                   (abs)         0000
+__size_of_msg_check              (abs)         0000
+__size_of_pulse_init             (abs)         0000
+__size_of_send_char_ram          (abs)         0000
+__size_of_send_msg               (abs)         0000
+__size_of_send_msg_ram           (abs)         0000
+__size_of_setup                  (abs)         0000
+__size_of_strcpy                 (abs)         0000
+__size_of_strlen                 (abs)         0000
+__size_of_wifi_cipsend           (abs)         0000
+__size_of_wifi_cipstart          (abs)         0000
+__size_of_wifi_close             (abs)         0000
+__size_of_wifi_cwdhcp            (abs)         0000
+__size_of_wifi_cwjap             (abs)         0000
+__size_of_wifi_cwmode            (abs)         0000
+__size_of_wifi_rst               (abs)         0000
+__size_of_wifi_status            (abs)         0000
+__smallconst                     smallconst    0000
+_buffer1                         bssCOMRAM     003F
+_buffer2                         bssCOMRAM     0039
+_cmsg                            mediumconst   3ED8
+_connect_state                   bssCOMRAM     004D
+_connection_mode                 mediumconst   3FA6
+_content_length                  bssBANK0      0093
+_copy_msg                        text29        1A06
+_data_string                     bssBANK0      0089
+_handle_cmd                      text10        0DEE
+_handle_cmd_connect              text16        100A
+_handle_cmd_setup                text11        12F2
+_handle_port1                    text7         05D2
+_handle_port2                    text6         0968
+_handle_pulse                    text5         154A
+_hex2ascii                       text28        1C26
+_hex2dec                         text27        17C8
+_hex2dec16                       text26        1718
+_http                            bssBANK0      0082
+_http_body                       mediumconst   3F92
+_http_body_strings               mediumconst   3F3A
+_http_calc                       text24        0138
+_http_connections                mediumconst   3F24
+_http_content_types              mediumconst   3F72
+_http_crlf                       mediumconst   3FB3
+_http_headers                    mediumconst   3E94
+_http_hosts                      mediumconst   3F83
+_http_protocol                   mediumconst   3F9C
+_http_requests                   mediumconst   3F4E
+_http_send_packet                text21        0BB0
+_http_urls                       mediumconst   3FAD
+_init_var                        text3         1442
+_ip                              mediumconst   3F60
+_isr                             intcode       0008
+_key                             bssBANK0      0068
+_main                            text0         1194
+_msg_check                       text9         1B52
+_packet_length                   bssBANK0      008F
+_pass                            (abs)         0380
+_port                            mediumconst   3FB6
+_port1                           bssCOMRAM     004B
+_port2                           bssCOMRAM     0049
+_pulse                           bssCOMRAM     0032
+_pulse_init                      text2         1A5C
+_run_state                       bssCOMRAM     002F
+_send_char_ram                   text8         1C5A
+_send_msg                        text23        194E
+_send_msg_ram                    text22        19B0
+_setup                           text1         1636
+_setup_state                     bssCOMRAM     0031
+_ssid                            (abs)         0300
+_strcpy                          text4         1CBE
+_strlen                          text25        1B00
+_sys_state                       bssCOMRAM     0030
+_temp_string                     bssBANK0      0065
+_time_string                     bssBANK0      0060
+_timeout_counter                 bssCOMRAM     002C
+_timeout_flag                    bssCOMRAM     002E
+_uart1_buffer                    (abs)         0100
+_uart2_buffer                    (abs)         0200
+_url                             mediumconst   3F08
+_wifi                            bssBANK0      0078
+_wifi_cipsend                    text20        1C8C
+_wifi_cipstart                   text19        1AAE
+_wifi_close                      text18        1D12
+_wifi_cmds                       mediumconst   3CED
+_wifi_cwdhcp                     text15        1868
+_wifi_cwjap                      text14        18DC
+_wifi_cwmode                     text13        1BE2
+_wifi_rst                        text12        1CEE
+_wifi_status                     text17        1D00
+_wifi_string                     bssCOMRAM     0045
+_wmsg                            mediumconst   3DE0
+btemp                            temp          004E
+copy_msg@bk                      cstackCOMRAM  0016
+copy_msg@index                   cstackCOMRAM  0013
+copy_msg@mem                     cstackCOMRAM  0011
+copy_msg@msg                     cstackCOMRAM  0014
+end_of_initialization            cinit         1BD4
+handle_cmd@buffer                cstackBANK0   00A0
+handle_cmd@http                  cstackBANK0   00A4
+handle_cmd@port                  cstackBANK0   009E
+handle_cmd@wifi                  cstackBANK0   00A2
+handle_cmd_connect@connect_state cstackBANK0   009C
+handle_cmd_connect@http          cstackBANK0   009A
+handle_cmd_connect@port          cstackBANK0   0096
+handle_cmd_connect@wifi          cstackBANK0   0098
+handle_cmd_setup@port            cstackCOMRAM  0021
+handle_cmd_setup@wifi            cstackCOMRAM  0023
+handle_port1@buffer              cstackCOMRAM  001A
+handle_port1@http                cstackCOMRAM  001E
+handle_port1@port                cstackCOMRAM  0018
+handle_port1@wifi                cstackCOMRAM  001C
+handle_port2@buffer              cstackCOMRAM  001B
+handle_port2@http                cstackCOMRAM  001F
+handle_port2@port                cstackCOMRAM  0019
+handle_port2@wifi                cstackCOMRAM  001D
+handle_pulse@pulse               cstackCOMRAM  0011
+hex2ascii@ascii_string           cstackCOMRAM  0011
+hex2ascii@n                      cstackCOMRAM  0013
+hex2dec16@F6550                  dataBANK0     00A6
+hex2dec16@ascii_string           cstackCOMRAM  0015
+hex2dec16@count                  cstackCOMRAM  0025
+hex2dec16@first                  cstackCOMRAM  0026
+hex2dec16@index                  cstackCOMRAM  0027
+hex2dec16@mult                   cstackCOMRAM  001B
+hex2dec16@n                      cstackCOMRAM  0017
+hex2dec@F6543                    dataBANK0     00B0
+hex2dec@ascii_string             cstackCOMRAM  0015
+hex2dec@count                    cstackCOMRAM  001C
+hex2dec@first                    cstackCOMRAM  001D
+hex2dec@index                    cstackCOMRAM  001E
+hex2dec@mult                     cstackCOMRAM  0019
+hex2dec@n                        cstackCOMRAM  0017
+http_calc@http                   cstackCOMRAM  0028
+http_send_packet@http            cstackCOMRAM  0014
+int$flags                        temp          004E
+intlevel0                        text          0000
+intlevel1                        text          0000
+intlevel2                        text          0000
+intlevel3                        text          0000
+msg_check@index                  cstackCOMRAM  0013
+msg_check@mem                    cstackCOMRAM  0011
+msg_check@msg                    cstackCOMRAM  0014
+pulse_init@pulse                 cstackCOMRAM  0011
+send_char_ram@c                  cstackCOMRAM  0011
+send_char_ram@dest               cstackCOMRAM  0013
+send_msg@dest                    cstackCOMRAM  0013
+send_msg@msg                     cstackCOMRAM  0011
+send_msg_ram@dest                cstackCOMRAM  0013
+send_msg_ram@msg                 cstackCOMRAM  0011
+stackhi                          (abs)         0EBF
+stacklo                          (abs)         0400
+start                            init          0134
+start_initialization             cinit         1B9C
+strcpy@cp                        cstackCOMRAM  0015
+strcpy@from                      cstackCOMRAM  0013
+strcpy@to                        cstackCOMRAM  0011
+strlen@cp                        cstackCOMRAM  0015
+strlen@s                         cstackCOMRAM  0011
+wifi_cwdhcp@enable               cstackCOMRAM  001F
+wifi_cwdhcp@mode                 cstackCOMRAM  0020
+wifi_cwjap@pass                  cstackCOMRAM  0016
+wifi_cwjap@ssid                  cstackCOMRAM  0014
+wifi_cwmode@mode                 cstackCOMRAM  001F
+
+
+FUNCTION INFORMATION:
+
+ *************** function _main *****************
+ Defined at:
+		line 180 in file "C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v2.0\main.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  2   99[None  ] int 
+ Registers used:
+		wreg, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru, prodl, prodh, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
+      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels required when called:    6
+ This function calls:
+		_handle_cmd
+		_handle_port1
+		_handle_port2
+		_handle_pulse
+		_init_var
+		_pulse_init
+		_send_msg
+		_setup
+ This function is called by:
+		Startup code after reset
+ This function uses a non-reentrant model
+
+
+ *************** function _setup *****************
+ Defined at:
+		line 6 in file "C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v2.0\setup.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
+      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _pulse_init *****************
+ Defined at:
+		line 7 in file "C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v2.0\pulse.c"
+ Parameters:    Size  Location     Type
+  pulse           2   16[COMRAM] PTR volatile struct .
+		 -> pulse(7), 
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr2l, fsr2h, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
+      Params:         2       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         2       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _init_var *****************
+ Defined at:
+		line 111 in file "C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v2.0\main.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
+      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		_strcpy
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _strcpy *****************
+ Defined at:
+		line 8 in file "C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\strcpy.c"
+ Parameters:    Size  Location     Type
+  to              2   16[COMRAM] PTR unsigned char 
+		 -> pass(128), ssid(128), 
+  from            2   18[COMRAM] PTR const unsigned char 
+		 -> STR_2(15), STR_1(14), 
+ Auto vars:     Size  Location     Type
+  cp              2   20[COMRAM] PTR unsigned char 
+		 -> pass(128), ssid(128), 
+ Return value:  Size  Location     Type
+                  2   16[COMRAM] PTR unsigned char 
+ Registers used:
+		wreg, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
+      Params:         4       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         2       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         6       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        6 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_init_var
+ This function uses a non-reentrant model
+
+
+ *************** function _handle_pulse *****************
+ Defined at:
+		line 16 in file "C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v2.0\pulse.c"
+ Parameters:    Size  Location     Type
+  pulse           2   16[COMRAM] PTR volatile struct .
+		 -> pulse(7), 
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr2l, fsr2h, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
+      Params:         2       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          4       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         6       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        6 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _handle_port2 *****************
+ Defined at:
+		line 303 in file "C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v2.0\port.c"
+ Parameters:    Size  Location     Type
+  port            2   24[COMRAM] PTR struct .
+		 -> port2(2), 
+  buffer          2   26[COMRAM] PTR volatile struct .
+		 -> buffer2(6), 
+  wifi            2   28[COMRAM] PTR struct .
+		 -> wifi(10), 
+  http            2   30[COMRAM] PTR struct .
+		 -> http(7), 
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru, prodl, prodh, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
+      Params:         8       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          4       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:        12       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:       12 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		_copy_msg
+		_msg_check
+		_send_char_ram
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _handle_port1 *****************
+ Defined at:
+		line 177 in file "C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v2.0\port.c"
+ Parameters:    Size  Location     Type
+  port            2   23[COMRAM] PTR struct .
+		 -> port1(2), 
+  buffer          2   25[COMRAM] PTR volatile struct .
+		 -> buffer1(6), 
+  wifi            2   27[COMRAM] PTR struct .
+		 -> wifi(10), 
+  http            2   29[COMRAM] PTR struct .
+		 -> http(7), 
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru, prodl, prodh, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
+      Params:         8       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          4       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:        12       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:       12 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		_msg_check
+		_send_char_ram
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _send_char_ram *****************
+ Defined at:
+		line 40 in file "C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v2.0\port.c"
+ Parameters:    Size  Location     Type
+  c               2   16[COMRAM] PTR volatile unsigned ch
+		 -> uart2_buffer(256), uart1_buffer(256), 
+  dest            1   18[COMRAM] unsigned char 
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr2l, fsr2h, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
+      Params:         3       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         3       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        3 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_handle_port1
+		_handle_port2
+ This function uses a non-reentrant model
+
+
+ *************** function _msg_check *****************
+ Defined at:
+		line 90 in file "C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v2.0\port.c"
+ Parameters:    Size  Location     Type
+  mem             2   16[COMRAM] PTR volatile unsigned ch
+		 -> uart2_buffer(256), uart1_buffer(256), 
+  index           1   18[COMRAM] unsigned char 
+  msg             2   19[COMRAM] PTR const unsigned char 
+		 -> wmsg(180), cmsg(48), 
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru, prodl, prodh
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
+      Params:         5       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          2       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         7       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        7 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_handle_port1
+		_handle_port2
+ This function uses a non-reentrant model
+
+
+ *************** function _handle_cmd *****************
+ Defined at:
+		line 252 in file "C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v2.0\port.c"
+ Parameters:    Size  Location     Type
+  port            2    8[BANK0 ] PTR struct .
+		 -> port1(2), 
+  buffer          2   10[BANK0 ] PTR volatile struct .
+		 -> buffer1(6), 
+  wifi            2   12[BANK0 ] PTR struct .
+		 -> wifi(10), 
+  http            2   14[BANK0 ] PTR struct .
+		 -> http(7), 
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru, prodl, prodh, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
+      Params:         0       8       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          1       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         1       8       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        9 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    5
+ This function calls:
+		_copy_msg
+		_handle_cmd_connect
+		_handle_cmd_setup
+		_send_msg
+		_send_msg_ram
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _handle_cmd_setup *****************
+ Defined at:
+		line 349 in file "C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v2.0\port.c"
+ Parameters:    Size  Location     Type
+  port            2   32[COMRAM] PTR struct .
+		 -> port1(2), 
+  wifi            2   34[COMRAM] PTR struct .
+		 -> wifi(10), 
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru, prodl, prodh, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
+      Params:         4       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          1       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         5       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        5 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    4
+ This function calls:
+		_wifi_cwdhcp
+		_wifi_cwjap
+		_wifi_cwmode
+		_wifi_rst
+		_wifi_status
+ This function is called by:
+		_handle_cmd
+ This function uses a non-reentrant model
+
+
+ *************** function _wifi_rst *****************
+ Defined at:
+		line 54 in file "C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v2.0\wifi.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, tblptrl, tblptrh, tblptru, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
+      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		_send_msg
+ This function is called by:
+		_handle_cmd_setup
+ This function uses a non-reentrant model
+
+
+ *************** function _wifi_cwmode *****************
+ Defined at:
+		line 46 in file "C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v2.0\wifi.c"
+ Parameters:    Size  Location     Type
+  mode            1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  mode            1   30[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru, prodl, prodh, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
+      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         1       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         1       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        1 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    3
+ This function calls:
+		_hex2dec
+		_send_msg
+		_send_msg_ram
+ This function is called by:
+		_handle_cmd_setup
+ This function uses a non-reentrant model
+
+
+ *************** function _wifi_cwjap *****************
+ Defined at:
+		line 70 in file "C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v2.0\wifi.c"
+ Parameters:    Size  Location     Type
+  ssid            2   19[COMRAM] PTR unsigned char 
+		 -> ssid(128), 
+  pass            2   21[COMRAM] PTR unsigned char 
+		 -> pass(128), 
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
+      Params:         4       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         4       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        4 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		_send_msg
+		_send_msg_ram
+ This function is called by:
+		_handle_cmd_setup
+ This function uses a non-reentrant model
+
+
+ *************** function _wifi_cwdhcp *****************
+ Defined at:
+		line 59 in file "C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v2.0\wifi.c"
+ Parameters:    Size  Location     Type
+  mode            1    wreg     unsigned char 
+  enable          1   30[COMRAM] unsigned char 
+ Auto vars:     Size  Location     Type
+  mode            1   31[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru, prodl, prodh, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
+      Params:         1       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         1       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         2       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    3
+ This function calls:
+		_hex2dec
+		_send_msg
+		_send_msg_ram
+ This function is called by:
+		_handle_cmd_setup
+ This function uses a non-reentrant model
+
+
+ *************** function _handle_cmd_connect *****************
+ Defined at:
+		line 405 in file "C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v2.0\port.c"
+ Parameters:    Size  Location     Type
+  port            2    0[BANK0 ] PTR struct .
+		 -> port1(2), 
+  wifi            2    2[BANK0 ] PTR struct .
+		 -> wifi(10), 
+  http            2    4[BANK0 ] PTR struct .
+		 -> http(7), 
+  connect_stat    2    6[BANK0 ] PTR enum E6450
+		 -> connect_state(1), 
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru, prodl, prodh, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
+      Params:         0       8       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0       8       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        8 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    4
+ This function calls:
+		_http_calc
+		_http_send_packet
+		_send_msg
+		_send_msg_ram
+		_wifi_cipsend
+		_wifi_cipstart
+		_wifi_close
+		_wifi_status
+ This function is called by:
+		_handle_cmd
+ This function uses a non-reentrant model
+
+
+ *************** function _wifi_status *****************
+ Defined at:
+		line 41 in file "C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v2.0\wifi.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, tblptrl, tblptrh, tblptru, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
+      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		_send_msg
+ This function is called by:
+		_handle_cmd_setup
+		_handle_cmd_connect
+ This function uses a non-reentrant model
+
+
+ *************** function _wifi_close *****************
+ Defined at:
+		line 98 in file "C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v2.0\wifi.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, tblptrl, tblptrh, tblptru, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
+      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		_send_msg
+ This function is called by:
+		_handle_cmd_connect
+ This function uses a non-reentrant model
+
+
+ *************** function _wifi_cipstart *****************
+ Defined at:
+		line 81 in file "C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v2.0\wifi.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, tblptrl, tblptrh, tblptru, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
+      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		_send_msg
+ This function is called by:
+		_handle_cmd_connect
+ This function uses a non-reentrant model
+
+
+ *************** function _wifi_cipsend *****************
+ Defined at:
+		line 90 in file "C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v2.0\wifi.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
+      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		_send_msg
+		_send_msg_ram
+ This function is called by:
+		_handle_cmd_connect
+ This function uses a non-reentrant model
+
+
+ *************** function _http_send_packet *****************
+ Defined at:
+		line 188 in file "C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v2.0\wifi.c"
+ Parameters:    Size  Location     Type
+  http            2   19[COMRAM] PTR struct .
+		 -> http(7), 
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
+      Params:         2       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          1       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         3       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        3 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		_send_msg
+		_send_msg_ram
+ This function is called by:
+		_handle_cmd_connect
+ This function uses a non-reentrant model
+
+
+ *************** function _send_msg_ram *****************
+ Defined at:
+		line 54 in file "C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v2.0\port.c"
+ Parameters:    Size  Location     Type
+  msg             2   16[COMRAM] PTR unsigned char 
+		 -> content_length(3), data_string(6), packet_length(4), wifi_string(4), 
+		 -> key(16), pass(128), ssid(128), 
+  dest            1   18[COMRAM] unsigned char 
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr2l, fsr2h, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
+      Params:         3       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         3       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        3 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_handle_cmd
+		_handle_cmd_connect
+		_wifi_cwmode
+		_wifi_cwdhcp
+		_wifi_cwjap
+		_wifi_cipsend
+		_http_send_packet
+ This function uses a non-reentrant model
+
+
+ *************** function _send_msg *****************
+ Defined at:
+		line 72 in file "C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v2.0\port.c"
+ Parameters:    Size  Location     Type
+  msg             2   16[COMRAM] PTR const unsigned char 
+		 -> STR_14(2), http_connections(22), http_content_types(17), http_hosts(15), 
+		 -> http_headers(68), http_crlf(3), http_protocol(10), http_urls(6), 
+		 -> http_requests(18), http_body_strings(20), http_body(10), port(3), 
+		 -> ip(18), connection_mode(7), STR_12(2), STR_11(4), 
+		 -> STR_10(2), STR_9(2), wifi_cmds(243), STR_8(3), 
+		 -> STR_6(3), url(28), STR_3(19), 
+  dest            1   18[COMRAM] unsigned char 
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, tblptrl, tblptrh, tblptru
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
+      Params:         3       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         3       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        3 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_main
+		_handle_cmd
+		_handle_cmd_connect
+		_wifi_status
+		_wifi_cwmode
+		_wifi_rst
+		_wifi_cwdhcp
+		_wifi_cwjap
+		_wifi_cipstart
+		_wifi_cipsend
+		_wifi_close
+		_http_send_packet
+ This function uses a non-reentrant model
+
+
+ *************** function _http_calc *****************
+ Defined at:
+		line 103 in file "C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v2.0\wifi.c"
+ Parameters:    Size  Location     Type
+  http            2   39[COMRAM] PTR struct .
+		 -> http(7), 
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru, prodl, prodh, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
+      Params:         2       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          1       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         3       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        3 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    3
+ This function calls:
+		_hex2dec
+		_hex2dec16
+		_strlen
+ This function is called by:
+		_handle_cmd_connect
+ This function uses a non-reentrant model
+
+
+ *************** function _strlen *****************
+ Defined at:
+		line 4 in file "C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\strlen.c"
+ Parameters:    Size  Location     Type
+  s               2   16[COMRAM] PTR const unsigned char 
+		 -> http_connections(22), http_content_types(17), http_hosts(15), http_headers(68), 
+		 -> STR_13(2), http_crlf(3), http_protocol(10), http_urls(6), 
+		 -> http_requests(18), content_length(3), data_string(6), http_body_strings(20), 
+		 -> http_body(10), key(16), 
+ Auto vars:     Size  Location     Type
+  cp              2   20[COMRAM] PTR const unsigned char 
+		 -> http_connections(22), http_content_types(17), http_hosts(15), http_headers(68), 
+		 -> STR_13(2), http_crlf(3), http_protocol(10), http_urls(6), 
+		 -> http_requests(18), content_length(3), data_string(6), http_body_strings(20), 
+		 -> http_body(10), key(16), 
+ Return value:  Size  Location     Type
+                  2   16[COMRAM] unsigned int 
+ Registers used:
+		wreg, fsr1l, fsr1h, status,2, status,0, tblptrl, tblptrh, tblptru
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
+      Params:         2       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         2       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          2       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         6       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        6 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_http_calc
+ This function uses a non-reentrant model
+
+
+ *************** function _hex2dec16 *****************
+ Defined at:
+		line 145 in file "C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v2.0\port.c"
+ Parameters:    Size  Location     Type
+  ascii_string    2   20[COMRAM] PTR unsigned char 
+		 -> data_string(6), 
+  n               2   22[COMRAM] unsigned int 
+ Auto vars:     Size  Location     Type
+  mult           10   26[COMRAM] unsigned int [5]
+  index           1   38[COMRAM] unsigned char 
+  first           1   37[COMRAM] unsigned char 
+  count           1   36[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0, prodl, prodh, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
+      Params:         4       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:        13       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          2       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:        19       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:       19 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		_hex2ascii
+ This function is called by:
+		_http_calc
+ This function uses a non-reentrant model
+
+
+ *************** function _hex2dec *****************
+ Defined at:
+		line 113 in file "C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v2.0\port.c"
+ Parameters:    Size  Location     Type
+  ascii_string    2   20[COMRAM] PTR unsigned char 
+		 -> content_length(3), packet_length(4), wifi_string(4), 
+  n               1   22[COMRAM] unsigned char 
+ Auto vars:     Size  Location     Type
+  mult            3   24[COMRAM] unsigned char [3]
+  index           1   29[COMRAM] unsigned char 
+  first           1   28[COMRAM] unsigned char 
+  count           1   27[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr2l, fsr2h, status,2, status,0, prodl, prodh, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
+      Params:         3       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         6       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          1       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:        10       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:       10 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		_hex2ascii
+ This function is called by:
+		_wifi_cwmode
+		_wifi_cwdhcp
+		_http_calc
+ This function uses a non-reentrant model
+
+
+ *************** function _hex2ascii *****************
+ Defined at:
+		line 103 in file "C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v2.0\port.c"
+ Parameters:    Size  Location     Type
+  ascii_string    2   16[COMRAM] PTR unsigned char 
+		 -> content_length(3), data_string(6), packet_length(4), wifi_string(4), 
+  n               1   18[COMRAM] unsigned char 
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr2l, fsr2h, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
+      Params:         3       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          1       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         4       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        4 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_hex2dec
+		_hex2dec16
+ This function uses a non-reentrant model
+
+
+ *************** function _copy_msg *****************
+ Defined at:
+		line 468 in file "C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v2.0\port.c"
+ Parameters:    Size  Location     Type
+  mem             2   16[COMRAM] PTR volatile unsigned ch
+		 -> uart2_buffer(256), uart1_buffer(256), 
+  index           1   18[COMRAM] unsigned char 
+  msg             2   19[COMRAM] PTR unsigned char 
+		 -> key(16), pass(128), ssid(128), 
+  bk              2   21[COMRAM] PTR const unsigned char 
+		 -> STR_7(2), STR_5(2), STR_4(2), 
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru, prodl, prodh
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
+      Params:         7       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          1       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         8       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        8 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_handle_cmd
+		_handle_port2
+ This function uses a non-reentrant model
+
+
+ *************** function _isr *****************
+ Defined at:
+		line 69 in file "C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v2.0\main.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr2l, fsr2h, status,2, status,0, prodl, prodh
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
+      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:         16       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:        16       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:       16 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		Interrupt level 2
+ This function uses a non-reentrant model
+
+
+
+MODULE INFORMATION
+
+Module		Function		Class		Link	Load	Size
+C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v2.0\port.c
+		_hex2ascii     		CODE           	1C26	0000	53
+		_handle_cmd    		CODE           	0DEE	0000	541
+		_handle_port1  		CODE           	05D2	0000	919
+		_handle_port2  		CODE           	0968	0000	585
+		_handle_cmd_setup		CODE           	12F2	0000	337
+		_msg_check     		CODE           	1B52	0000	75
+		_copy_msg      		CODE           	1A06	0000	87
+		_send_msg      		CODE           	194E	0000	99
+		_send_msg_ram  		CODE           	19B0	0000	87
+		_hex2dec       		CODE           	17C8	0000	161
+		_hex2dec16     		CODE           	1718	0000	177
+		_send_char_ram 		CODE           	1C5A	0000	51
+		_handle_cmd_connect		CODE           	100A	0000	395
+
+C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v2.0\port.c estimated size: 3567
+
+C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v2.0\setup.c
+		_setup         		CODE           	1636	0000	227
+
+C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v2.0\setup.c estimated size: 227
+
+C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v2.0\wifi.c
+		_wifi_cwjap    		CODE           	18DC	0000	115
+		_wifi_cwmode   		CODE           	1BE2	0000	69
+		_wifi_cwdhcp   		CODE           	1868	0000	117
+		_http_calc     		CODE           	0138	0000	1179
+		_wifi_rst      		CODE           	1CEE	0000	19
+		_wifi_cipsend  		CODE           	1C8C	0000	51
+		_wifi_close    		CODE           	1D12	0000	19
+		_wifi_status   		CODE           	1D00	0000	19
+		_wifi_cipstart 		CODE           	1AAE	0000	83
+		_http_send_packet		CODE           	0BB0	0000	575
+
+C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v2.0\wifi.c estimated size: 2246
+
+C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v2.0\main.c
+		_main          		CODE           	1194	0000	351
+		_isr           		CODE           	0008	0000	301
+		_init_var      		CODE           	1442	0000	265
+
+C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v2.0\main.c estimated size: 917
+
+shared
+		_http_body_strings		MEDIUMCONST    	3F3A	0000	21
+		_http_crlf     		MEDIUMCONST    	3FB3	0000	4
+		_http_connections		MEDIUMCONST    	3F24	0000	23
+		_cmsg          		MEDIUMCONST    	3ED8	0000	49
+		_http_urls     		MEDIUMCONST    	3FAD	0000	7
+		_wifi_cmds     		MEDIUMCONST    	3CED	0000	244
+		_url           		MEDIUMCONST    	3F08	0000	29
+		_connection_mode		MEDIUMCONST    	3FA6	0000	8
+		_http_requests 		MEDIUMCONST    	3F4E	0000	19
+		_wmsg          		MEDIUMCONST    	3DE0	0000	181
+		__initialization		CODE           	1B9C	0000	57
+		_port          		MEDIUMCONST    	3FB6	0000	4
+		_ip            		MEDIUMCONST    	3F60	0000	19
+		_http_body     		MEDIUMCONST    	3F92	0000	11
+		_http_protocol 		MEDIUMCONST    	3F9C	0000	11
+		_http_hosts    		MEDIUMCONST    	3F83	0000	16
+		_http_content_types		MEDIUMCONST    	3F72	0000	18
+		_http_headers  		MEDIUMCONST    	3E94	0000	69
+
+shared estimated size: 790
+
+C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\strlen.c
+		_strlen        		CODE           	1B00	0000	83
+
+C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\strlen.c estimated size: 83
+
+C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\strcpy.c
+		_strcpy        		CODE           	1CBE	0000	49
+
+C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\strcpy.c estimated size: 49
+
+C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v2.0\pulse.c
+		_handle_pulse  		CODE           	154A	0000	237
+		_pulse_init    		CODE           	1A5C	0000	83
+
+C:\Users\spelu\OneDrive\momega\dev\hardware\prototyping\dev_core\firmware\v2.0\pulse.c estimated size: 320
+
